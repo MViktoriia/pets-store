@@ -11,7 +11,7 @@ module.exports = {
     colors: {
       yellow: '#FFC54B',
       orange: '#FF9100',
-      'green-blue': {
+      cyan: {
         light: '#68BBBB',
         DEFAULT: '#308D8D',
         dark: '#124B4B',
@@ -19,12 +19,15 @@ module.exports = {
       white: '#ffffff',
       black: '#000000',
       red: '#DD0000',
-      'gray-light': '#d3dce6',
-      gray: '3C3C3C',
+      gray: {
+        light: '#d3dce6',
+        DEFAULT: '3C3C3C',
+      },
     },
+    container: {},
     fontFamily: {
-      header: ['var(--font-crimson)', 'sans-serif'],
-      text: ['var(--font-montserrat)'],
+      serif: ['var(--font-crimson)'],
+      sans: ['var(--font-montserrat)'],
     },
     extend: {},
   },
