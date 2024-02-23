@@ -1,7 +1,7 @@
 import React from 'react';
 import { Crimson_Pro, Montserrat } from 'next/font/google';
 import './globals.css';
-
+import Header from './components/Header/header';
 const crimson_pro = Crimson_Pro({
   subsets: ['latin'],
   variable: '--font-crimson',
@@ -24,7 +24,9 @@ export default function RootLayout({
       lang="en"
       className={`${crimson_pro.variable} ${montserrat.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}</body>
     </html>
   );
 }

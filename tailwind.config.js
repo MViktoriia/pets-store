@@ -35,7 +35,12 @@ module.exports = {
       serif: ['var(--font-crimson)'],
       sans: ['var(--font-montserrat)'],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '93': '360px',
+        '26': '6.25rem'
+      }
+    },
   },
   plugins: [],
 };
