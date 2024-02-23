@@ -24,7 +24,13 @@ module.exports = {
         DEFAULT: '3C3C3C',
       },
     },
-    container: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '16px',
+        xl: '100px',
+      },
+    },
     fontFamily: {
       serif: ['var(--font-crimson)'],
       sans: ['var(--font-montserrat)'],

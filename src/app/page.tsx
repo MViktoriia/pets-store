@@ -20,25 +20,27 @@ import {
 export default function Home() {
   return (
     <main>
-      <h1 className=" text-center font-sans font-normal text-2xl">
-        Бренди з якими ми працюємо
-      </h1>
-      <ArrowNextReviewsIcon />
-      <ArrowPrevReviewsIcon />
-      <ArrowPrevIcon />
-      <BirdIcon />
-      <CartIcon />
-      <CatIcon />
-      <DeliveryCar />
-      <DogIcon />
-      <FacebookIcon />
-      <FishIcon />
-      <OrdersIcon />
-      <ProfileIcon />
-      <InstagramIcon />
-      <LogoIcon />
-      <PawsIcon />
-      <CategoryIcon category={Category.Cat} />
+      <div className="container">
+        <h1 className=" text-center font-sans font-normal text-2xl">
+          Бренди з якими ми працюємо
+        </h1>
+        <ArrowNextReviewsIcon />
+        <ArrowPrevReviewsIcon />
+        <ArrowPrevIcon />
+        <BirdIcon />
+        <CartIcon />
+        <CatIcon />
+        <DeliveryCar />
+        <DogIcon />
+        <FacebookIcon />
+        <FishIcon />
+        <OrdersIcon />
+        <ProfileIcon />
+        <InstagramIcon />
+        <LogoIcon />
+        <PawsIcon />
+        <CategoryIcon category={Category.Cat} />
+      </div>
     </main>
   );
 }
