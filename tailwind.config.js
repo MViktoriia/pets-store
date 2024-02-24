@@ -5,7 +5,7 @@ module.exports = {
     screens: {
       sm: '375px',
       md: '768px',
-      lg: '976px',
+      lg: '1024px',
       xl: '1440px',
     },
     colors: {
@@ -34,6 +34,13 @@ module.exports = {
     fontFamily: {
       serif: ['var(--font-crimson)'],
       sans: ['var(--font-montserrat)'],
+    },
+    fontSize: {
+      base: ['16px', '1.4'],
+    },
+    content: {
+      triangle: 'url("/icons/triangle.svg")',
+      triangleMob: 'url("/icons/triangle-mobile.svg")',
     },
     extend: {},
   },
