@@ -22,6 +22,7 @@ module.exports = {
       gray: {
         light: '#d3dce6',
         DEFAULT: '3C3C3C',
+        ligthMax: '#E8E8E8'
       },
     },
     container: {
@@ -30,12 +31,27 @@ module.exports = {
         DEFAULT: '16px',
         xl: '100px',
       },
+    }, borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      DEFAULT: '4px',
+      'md': '10px',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '12px',
     },
     fontFamily: {
       serif: ['var(--font-crimson)'],
       sans: ['var(--font-montserrat)'],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '93': '360px',
+        '92': '343px',
+        '26': '6.25rem'
+      }
+    },
   },
   plugins: [],
 };
