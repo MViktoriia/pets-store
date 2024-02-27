@@ -46,6 +46,7 @@ module.exports = {
     fontFamily: {
       serif: ['var(--font-cormorant)'],
       sans: ['var(--font-montserrat)'],
+      crimson: ['var(--font-crimson)'],
     },
     fontSize: {
       base: ['16px', '1.4'],

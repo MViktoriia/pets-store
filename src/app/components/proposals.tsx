@@ -270,7 +270,7 @@ function Proposals() {
     },
   ];
   return (
-    <section className=" h-[236px] pt-6">
+    <section className=" pt-6">
       <div className="container">
         <h2 className=" font-serif text-[24px] text-center font-normal mb-6 lg:text-[36px]">
           Пропозиції
