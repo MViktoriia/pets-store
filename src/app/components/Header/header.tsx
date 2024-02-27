@@ -2,10 +2,11 @@ import { CartIcon, HeartIcon, LogoIcon } from "../icons";
 import logo from "../../../../public/icons/Logo.png"
 import burger from "../../../../public/icons/Burger.png"
 import Image from 'next/image'
+import Navigation from "../Navigation/navigation";
 function Header() {
   return (
     <>
-      <header className='min-h-93 container'>
+      <header className='min-h-56 container'>
       <div className='flex flex-col md:flex-row pt-10 pb-8 md:justify-between justify-center relative'>
       {/* Контейнер для бургера и логотипа */}
     <div className="flex items-center"> {/* Используем flex и items-center */}
@@ -35,7 +36,7 @@ function Header() {
     </div>
   </div>
 </header>
-
+<Navigation />
     </>
 
   )
