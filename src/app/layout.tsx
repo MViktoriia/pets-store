@@ -1,15 +1,15 @@
 import React from 'react';
-import { Crimson_Pro, Montserrat } from 'next/font/google';
+import { Cormorant, Crimson_Pro, Montserrat } from 'next/font/google';
 import './globals.css';
 
-const crimson_pro = Crimson_Pro({
-  subsets: ['latin'],
-  variable: '--font-crimson',
+const cormorant = Cormorant({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-cormorant',
   display: 'swap',
 });
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   variable: '--font-montserrat',
   display: 'swap',
 });
@@ -20,10 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${crimson_pro.variable} ${montserrat.variable}`}
-    >
+    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
       <body>{children}</body>
     </html>
   );

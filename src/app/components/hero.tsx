@@ -17,7 +17,7 @@ function Hero() {
             </Text>
             <ButtonLink
               href="/programa-loyalnosti"
-              className=" border-cyan px-8 py-2 xl:px-[88px] xl:py-[13px] hover:border-orange active:text-yellow "
+              className=" border-cyan px-8 py-2 xl:px-[88px] xl:py-[13px] hover:border-orange  hover:text-orange active:text-yellow "
             >
               Button
             </ButtonLink>

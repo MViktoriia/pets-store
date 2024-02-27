@@ -21,6 +21,7 @@ module.exports = {
       red: '#DD0000',
       gray: {
         light: '#d3dce6',
+        extraLight: '#E6E6E7',
         DEFAULT: '3C3C3C',
       },
     },
@@ -32,11 +33,12 @@ module.exports = {
       },
     },
     fontFamily: {
-      serif: ['var(--font-crimson)'],
+      serif: ['var(--font-cormorant)'],
       sans: ['var(--font-montserrat)'],
     },
     fontSize: {
       base: ['16px', '1.4'],
+      sm: ['12px', '1.4'],
     },
     content: {
       triangle: 'url("/icons/triangle.svg")',

@@ -23,7 +23,8 @@ export const ButtonLink: FC<
   return (
     <Link
       className={clsx(
-        `border border-solid rounded-[10px] text-base bg-white ${className} hover:text-orange `,
+        `border border-solid rounded-[10px] text-base bg-white ${className} hover:text-orange`,
+        disabled && 'pointer-events-none text-gray-light border-gray-light',
       )}
       href={href}
       as={as}
