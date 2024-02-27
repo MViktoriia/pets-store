@@ -1,46 +1,11 @@
-import CategoryIcon, { Category } from './components/category-icon';
-import {
-  ArrowNextReviewsIcon,
-  ArrowPrevIcon,
-  ArrowPrevReviewsIcon,
-  BirdIcon,
-  CartIcon,
-  CatIcon,
-  DeliveryCar,
-  DogIcon,
-  FacebookIcon,
-  FishIcon,
-  InstagramIcon,
-  LogoIcon,
-  OrdersIcon,
-  PawsIcon,
-  ProfileIcon,
-} from './components/icons';
+import Hero from './components/hero';
+import Proposals from './components/proposals';
 
 export default function Home() {
   return (
     <main>
-      <div className="container">
-        <h1 className=" text-center font-sans font-normal text-2xl">
-          Бренди з якими ми працюємо
-        </h1>
-        <ArrowNextReviewsIcon />
-        <ArrowPrevReviewsIcon />
-        <ArrowPrevIcon />
-        <BirdIcon />
-        <CartIcon />
-        <CatIcon />
-        <DeliveryCar />
-        <DogIcon />
-        <FacebookIcon />
-        <FishIcon />
-        <OrdersIcon />
-        <ProfileIcon />
-        <InstagramIcon />
-        <LogoIcon />
-        <PawsIcon />
-        <CategoryIcon category={Category.Cat} />
-      </div>
+      <Hero />
+      <Proposals />
     </main>
   );
 }

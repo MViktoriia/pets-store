@@ -11,6 +11,7 @@ export { default as DogIcon } from './DogIcon';
 export { default as FacebookIcon } from './FacebookIcon';
 export { default as FishIcon } from './FishIcon';
 export { default as HeartIcon } from './HeartIcon';
+export { default as HeartWithShadowIcon } from './HeartWithShadowIcon';
 export { default as CrossIcon } from './CrossIcon';
 export { default as BurgerMenuIcon } from './BurgerMenuIcon';
 export { default as OrdersIcon } from './OrdersIcon';
