@@ -23,6 +23,7 @@ module.exports = {
         light: '#d3dce6',
         extraLight: '#E6E6E7',
         DEFAULT: '3C3C3C',
+        ligthMax: '#E8E8E8',
       },
     },
     container: {
@@ -31,6 +32,16 @@ module.exports = {
         DEFAULT: '16px',
         xl: '100px',
       },
+    },
+    borderRadius: {
+      none: '0',
+      sm: '0.125rem',
+      DEFAULT: '0.25rem',
+      DEFAULT: '4px',
+      md: '10px',
+      lg: '0.5rem',
+      full: '9999px',
+      large: '12px',
     },
     fontFamily: {
       serif: ['var(--font-cormorant)'],
@@ -44,7 +55,13 @@ module.exports = {
       triangle: 'url("/icons/triangle.svg")',
       triangleMob: 'url("/icons/triangle-mobile.svg")',
     },
-    extend: {},
+    extend: {
+      spacing: {
+        93: '360px',
+        92: '343px',
+        26: '6.25rem',
+      },
+    },
   },
   plugins: [],
 };
