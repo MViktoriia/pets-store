@@ -6,10 +6,10 @@ import Navigation from "../Navigation/navigation";
 function Header() {
   return (
     <>
-      <header className='min-h-56 container'>
+      <header className='md:min-h-56 h-48 container bg-cyan'>
       <div className='flex flex-col md:flex-row pt-10 pb-8 md:justify-between justify-center relative'>
       {/* Контейнер для бургера и логотипа */}
-    <div className="flex items-center"> {/* Используем flex и items-center */}
+    <div className="flex items-center"> 
       <div> {/* Отступ справа для бургера */}
         <Image  src={burger} className="md:w-56 w-12 md:hidden" alt="Burger Icon" />
       </div>

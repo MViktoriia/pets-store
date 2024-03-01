@@ -40,6 +40,7 @@ module.exports = {
       DEFAULT: '4px',
       md: '10px',
       lg: '0.5rem',
+      xl: '20px',
       full: '9999px',
       large: '12px',
     },
