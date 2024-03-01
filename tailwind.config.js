@@ -22,7 +22,7 @@ module.exports = {
       gray: {
         light: '#d3dce6',
         extraLight: '#E6E6E7',
-        DEFAULT: '3C3C3C',
+        DEFAULT: '#3C3C3C',
         ligthMax: '#E8E8E8',
       },
     },
@@ -61,6 +61,10 @@ module.exports = {
         93: '360px',
         92: '343px',
         26: '6.25rem',
+      },
+      backgroundImage: {
+        salesBanerImage: "url('/images/dog-banner-sales-2x.png')",
+        salesBanerMobileImage: "url('/images/dog-banner-sales-mobile-2x.png')",
       },
     },
   },
