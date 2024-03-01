@@ -15,13 +15,22 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
+const crimson = Crimson_Pro({
+  subsets: ['latin'],
+  variable: '--font-crimson',
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${montserrat.variable} ${crimson.variable}`}
+    >
       <body>
         <Header />
         {children}

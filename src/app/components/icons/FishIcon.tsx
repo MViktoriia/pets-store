@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 function FishIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 45 51"
       xmlns="http://www.w3.org/2000/svg"
       width="45"
       height="51"

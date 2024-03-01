@@ -22,7 +22,7 @@ module.exports = {
       gray: {
         light: '#d3dce6',
         extraLight: '#E6E6E7',
-        DEFAULT: '3C3C3C',
+        DEFAULT: '#3C3C3C',
         ligthMax: '#E8E8E8',
       },
     },
@@ -47,6 +47,7 @@ module.exports = {
     fontFamily: {
       serif: ['var(--font-cormorant)'],
       sans: ['var(--font-montserrat)'],
+      crimson: ['var(--font-crimson)'],
     },
     fontSize: {
       base: ['16px', '1.4'],
@@ -58,12 +59,15 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '93': '360px',
-        '92': '343px',
-        '26': '6.25rem',
-        '29': '115.2px'
-      }
-
+        93: '360px',
+        92: '343px',
+        26: '6.25rem',
+        29: '115.2px',
+      },
+      backgroundImage: {
+        salesBanerImage: "url('/images/dog-banner-sales-2x.png')",
+        salesBanerMobileImage: "url('/images/dog-banner-sales-mobile-2x.png')",
+      },
     },
   },
   plugins: [],
