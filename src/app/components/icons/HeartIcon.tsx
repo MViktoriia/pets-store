@@ -3,9 +3,10 @@ import { SVGProps } from 'react';
 function HeartIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 35 33"
       xmlns="http://www.w3.org/2000/svg"
-      width="34"
-      height="34"
+      width="35"
+      height="33"
       fill="currentColor"
       {...props}
     >
