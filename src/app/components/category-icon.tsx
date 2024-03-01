@@ -1,3 +1,4 @@
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { BirdIcon, CatIcon, DogIcon, FishIcon } from './icons';
 import clsx from 'clsx';
 
@@ -14,59 +15,61 @@ export interface CategoryIconProps {
   disabled?: boolean;
 }
 
-function CategoryIcon({ category, active, disabled }: CategoryIconProps) {
+function CategoryIcon({
+  category,
+  active,
+  disabled,
+  ...rest
+}: CategoryIconProps &
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
   switch (category) {
     case 'dog':
       return (
-        <button className=" flex justify-center items-center w-20 h-20">
+        <div {...rest}>
           <DogIcon
             className={clsx(
-              ' fill-white hover:fill-orange',
-              active && ' fill-yellow',
-              disabled &&
-                'fill-gray-light cursor-not-allowed hover:fill-gray-light',
+              'w-[19.72px] h-[19.34px] xl:w-[52px] xl:h-[51px] fill-white hover:fill-yellow',
+              active && ' fill-orange',
+              disabled && 'cursor-not-allowed',
             )}
           />
-        </button>
+        </div>
       );
     case 'cat':
       return (
-        <button className=" flex justify-center items-center w-20 h-20">
+        <div {...rest}>
           <CatIcon
             className={clsx(
-              ' fill-white hover:fill-orange',
-              active && ' fill-yellow',
-              disabled &&
-                'fill-gray-light cursor-not-allowed hover:fill-gray-light',
+              'w-[22px] h-[21.63px] xl:w-[51px] xl:h-[51px] fill-white hover:fill-yellow',
+              active && ' fill-orange',
+              disabled && 'cursor-not-allowed',
             )}
           />
-        </button>
+        </div>
       );
     case 'bird':
       return (
-        <button className=" flex justify-center items-center w-20 h-20">
+        <div {...rest}>
           <BirdIcon
             className={clsx(
-              ' fill-white hover:fill-orange',
-              active && ' fill-yellow',
-              disabled &&
-                'fill-gray-light cursor-not-allowed hover:fill-gray-light',
+              'w-[12px] h-[22px] xl:w-[26px] xl:h-[51px] fill-white hover:fill-yellow',
+              active && ' fill-orange',
+              disabled && 'cursor-not-allowed',
             )}
           />
-        </button>
+        </div>
       );
     case 'fish':
       return (
-        <button className=" flex justify-center items-center w-20 h-20">
+        <div {...rest}>
           <FishIcon
             className={clsx(
-              ' fill-white hover:fill-orange',
-              active && ' fill-yellow',
-              disabled &&
-                'fill-gray-light cursor-not-allowed hover:fill-gray-light',
+              'w-[19px] h-[22px] xl:w-[44px] xl:h-[51px] fill-white hover:fill-yellow',
+              active && ' fill-orange',
+              disabled && 'cursor-not-allowed',
             )}
           />
-        </button>
+        </div>
       );
     default:
       return <svg></svg>;
