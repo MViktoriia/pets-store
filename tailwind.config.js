@@ -40,6 +40,7 @@ module.exports = {
       DEFAULT: '4px',
       md: '10px',
       lg: '0.5rem',
+      xl: '20px',
       full: '9999px',
       large: '12px',
     },
@@ -61,6 +62,7 @@ module.exports = {
         93: '360px',
         92: '343px',
         26: '6.25rem',
+        29: '115.2px',
       },
       backgroundImage: {
         salesBanerImage: "url('/images/dog-banner-sales-2x.png')",

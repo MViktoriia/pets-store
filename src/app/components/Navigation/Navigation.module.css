@@ -1,0 +1,16 @@
+.navText{
+font-size: 24px;
+font-weight: 400;
+line-height: 34px;
+letter-spacing: 0em;
+color: white
+}
+.scrollableContainer {
+  position: relative;
+}
+@media (max-width: 768px) {
+    .navText {
+      font-size: 18px; /* Новый размер шрифта для меньших экранов */
+      line-height: 28px; /* Новая высота строки для меньших экранов */
+    }
+  }
