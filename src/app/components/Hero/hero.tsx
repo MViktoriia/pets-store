@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import ButtonLink from './button-link';
-import Text from './text';
-import Cats from '../../../public/images/three-cats-hero-section-2x.png';
-import Dog from '../../../public/images/dog-hero-2x.png';
+import ButtonLink from '@/app/components/button-link';
+import Text from '@/app/components/text';
+import Cats from '/public/images/three-cats-hero-section-2x.png';
+import Dog from '/public/images/dog-hero-2x.png';
 
 function Hero() {
   return (
