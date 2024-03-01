@@ -5,6 +5,9 @@ line-height: 34px;
 letter-spacing: 0em;
 color: white
 }
+.scrollableContainer {
+  position: relative;
+}
 @media (max-width: 768px) {
     .navText {
       font-size: 18px; /* Новый размер шрифта для меньших экранов */
