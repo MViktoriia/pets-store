@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 33 33"
       xmlns="http://www.w3.org/2000/svg"
       width="33"
       height="33"
