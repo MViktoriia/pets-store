@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 function DeliveryCar(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 57 57"
       xmlns="http://www.w3.org/2000/svg"
       width="57"
       height="57"

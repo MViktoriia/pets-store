@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 function OrdersIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 26 51"
       xmlns="http://www.w3.org/2000/svg"
       width="34"
       height="39"

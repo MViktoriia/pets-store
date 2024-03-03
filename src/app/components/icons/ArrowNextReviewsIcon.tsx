@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 function ArrowNextReviewsIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 28 24"
       xmlns="http://www.w3.org/2000/svg"
       width="28"
       height="24"

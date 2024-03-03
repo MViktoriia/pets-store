@@ -2,6 +2,7 @@ import { SVGProps } from 'react';
 
 const ArrowPrevIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
+    viewBox="0 0 15 25"
     xmlns="http://www.w3.org/2000/svg"
     width="15"
     height="25"
