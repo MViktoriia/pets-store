@@ -6,7 +6,6 @@ export { default as BirdIcon } from './BirdIcon';
 export { default as CartIcon } from './CartIcon';
 export { default as CatIcon } from './CatIcon';
 export { default as CheckIcon } from './CheckIcon';
-export { default as DeliveryCar } from './DeliveryCar';
 export { default as DogIcon } from './DogIcon';
 export { default as FacebookIcon } from './FacebookIcon';
 export { default as FishIcon } from './FishIcon';

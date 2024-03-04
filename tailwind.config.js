@@ -56,6 +56,8 @@ module.exports = {
     content: {
       triangle: 'url("/icons/triangle.svg")',
       triangleMob: 'url("/icons/triangle-mobile.svg")',
+      deliveryCheck: 'url("/icons/check-icon.svg")',
+      deliveryCar: 'url("/icons/car-delivery.svg")',
     },
     extend: {
       spacing: {

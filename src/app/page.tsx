@@ -1,4 +1,5 @@
 import Hero from './components/Hero/hero';
+import Delivery from './components/Delivery/delivery';
 import OurAdvantages from './components/our-advantages';
 import Promo from './components/promo';
 import Proposals from './components/proposals';
@@ -10,6 +11,7 @@ export default function Home() {
       <Proposals />
       <Promo />
       <OurAdvantages />
+      <Delivery />
     </main>
   );
 }
