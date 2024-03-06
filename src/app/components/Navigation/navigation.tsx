@@ -5,13 +5,13 @@ import styles from './Navigation.module.css';
 
 
 function Navigation(){
-  const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} bg-cyan-light md:rounded-xl overflow-x-auto`;
+  const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} ${styles.ulScroll} bg-cyan-light md:rounded-xl overflow-x-auto`;
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
    return(
        <>
        <section className="bg-cyan">
        <nav className={navClasses}>
-     <ul className={ulClasses}>
+     <ul  className={ulClasses}>
        <li className="md:flex-1 text-center mx-2 px-3 shrink-0">
       <a href="#"><CategoryIcon category={Category.Dog}  /> <span>Собаки</span></a> 
          {/* <DogIcon className="inline" /> */}
