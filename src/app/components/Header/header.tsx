@@ -28,7 +28,7 @@ function Header() {
         <div className="h-20 w-92 md:w-96 grid items-center">
           <input type="text" placeholder="Пошук" className="p-2 rounded-md border border-gray-ligthMax md:mr-4 w-92" />
         </div>
-        <div className="h-20 w-22 bg-blue md:grid items-center order-3 md:order-2 absolute md:relative md:top-0 top-11 right-0">
+        <div className="h-20 w-22 bg-blue md:grid items-center order-3 md:order-2 absolute md:relative md:top-0 top-11 right-6">
           <CartIcon  />
         </div>
         <div className="h-20 w-22 bg-green items-center pr-16  md:grid hidden">
