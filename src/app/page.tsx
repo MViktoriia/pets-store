@@ -4,6 +4,7 @@ import OurAdvantages from './components/our-advantages';
 import Promo from './components/promo';
 import Proposals from './components/proposals';
 import Brands from './components/brands';
+import Reviews from './components/Reviews/reviews';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <OurAdvantages />
       <Delivery />
       <Brands />
+      <Reviews />
     </main>
   );
 }
