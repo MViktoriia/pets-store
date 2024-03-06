@@ -7,8 +7,8 @@ function Header() {
 
   return (
     <>
-      <header className='md:min-h-56 h-48 container bg-cyan'>
-      <div className='flex flex-col md:flex-row pt-10 pb-8 md:justify-between justify-center relative'>
+      <header className='md:min-h-56 h-48  bg-cyan'>
+      <div className='flex flex-col container md:flex-row pt-10 pb-8 md:justify-between justify-center relative'>
      
     <div className="flex items-center"> 
       <div> 
