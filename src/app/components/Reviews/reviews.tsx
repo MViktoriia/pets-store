@@ -1,72 +1,91 @@
 'use client';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import cat from '../../../../public/images/cat-reviews-2x.png';
 import dog from '../../../../public/images/dog-reviews-2x.png';
 import ReviewCard from './review-card';
 import { reviews } from '@/app/lib/utils/constants/reviews';
+import ReviewsNavBtn from './reviews-nav-btn';
+import { ArrowPrevReviewsIcon } from '../icons';
+import { ArrowNextReviewsIcon } from '../icons';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { type } from 'os';
+import clsx from 'clsx';
 
 function Reviews() {
+  const swiper = useSwiper();
   return (
     <section className="pt-6 xl:pt-[60px]">
       <h2 className=" font-serif text-[24px] text-center font-normal mb-6 lg:text-[36px] lg:mb-[57px]">
         Відгуки
       </h2>
       <div className=" relative bg-yellow h-[448px] xl:h-[450px] pt-6">
-        <div className=" container">
-          <Swiper
-            wrapperTag="ul"
-            wrapperClass="items-center"
-            spaceBetween={11}
-            slidesPerView={1}
-            loop
-            modules={[Pagination, Navigation]}
-            pagination={{
-              el: '#containerForBullets',
-              type: 'bullets',
-              clickable: true,
-              bulletClass:
-                'inline-block w-3 h-3 mr-3 last:mr-0 rounded-full border border-yellow',
-              bulletActiveClass: 'bg-yellow',
-            }}
-            breakpoints={{
-              1024: {
-                slidesPerView: 3,
-              },
-              1440: {
-                slidesPerView: 3,
-                spaceBetween: 11,
-              },
-            }}
-          >
-            {reviews.map((review) => (
-              <SwiperSlide
-                tag="li"
-                className="w-[286px] flex justify-center items-center"
-                key={review.id}
-              >
-                <ReviewCard
-                  reviewerName={review.name}
-                  reviewText={review.text}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className=" container [&_.swiper-pagination-bullets.swiper-pagination-horizontal]:bottom-[30px] xl:[&_.swiper-pagination-bullets.swiper-pagination-horizontal]:bottom-8 ">
+          <div className="flex items-center">
+            <div id="prevBtn" className=" hidden mr-6 w-[50px] md:flex ">
+              <ReviewsNavBtn>
+                <ArrowPrevReviewsIcon />
+              </ReviewsNavBtn>
+            </div>
+            <Swiper
+              wrapperTag="ul"
+              wrapperClass="items-center"
+              spaceBetween={11}
+              slidesPerView={1}
+              loop
+              modules={[Pagination, Navigation]}
+              pagination={{
+                el: '#reviewsContainerForBullets',
+                type: 'bullets',
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 1,
+              }}
+              navigation={{
+                nextEl: '#nextBtn',
+                prevEl: '#prevBtn',
+              }}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                },
+                1440: {
+                  slidesPerView: 3,
+                  spaceBetween: 11,
+                },
+              }}
+            >
+              {reviews.map((review) => (
+                <SwiperSlide
+                  tag="li"
+                  className="w-[286px] flex justify-center items-center   "
+                  key={review.id}
+                >
+                  <ReviewCard
+                    reviewerName={review.name}
+                    reviewText={review.text}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div id="nextBtn" className=" hidden ml-6 w-[50px] md:flex ">
+              <ReviewsNavBtn>
+                <ArrowNextReviewsIcon />
+              </ReviewsNavBtn>
+            </div>
+          </div>
           <div
-            id="containerForBullets"
-            className=" w-[156px] left-1/2 translate-x-1/2 md:-translate-x-1/2 md:w-[60px]"
+            id="reviewsContainerForBullets"
+            className="absolute text-center transition-opacity z-10 w-[156px] left-1/2 translate-x-[-50%] whitespace-nowrap overflow-hidden xl:w-[256px]  [&>.swiper-pagination-bullet]:w-4 [&>.swiper-pagination-bullet]:h-4 [&>.swiper-pagination-bullet]:bg-orange [&>.swiper-pagination-bullet]:opacity-100 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active-main]:bg-white "
           ></div>
-          <div className="absolute z-30 bottom-0 left-4 xl:left-[72px] w-[67px] xl:w-[146px]">
+          <div className="absolute z-10 bottom-0 left-4 xl:left-[72px] w-[67px] xl:w-[146px]">
             <Image src={cat} alt="The striped cat raised a paw" />
           </div>
-          <div className=" absolute z-30 bottom-0 right-2 xl:right-[76px] w-[60px] xl:w-[123px]">
+          <div className=" absolute z-10 bottom-0 right-2 xl:right-[76px] w-[60px] xl:w-[123px]">
             <Image
               src={dog}
               alt="The white-brown dog has raised its paw and is listening"
