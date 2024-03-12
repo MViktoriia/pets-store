@@ -1,4 +1,4 @@
-import { CheckIcon } from './icons';
+import { CheckIcon } from '../icons';
 
 export interface Advantage {
   title: string;

@@ -1,9 +1,9 @@
 import Hero from './components/Hero/hero';
 import Delivery from './components/Delivery/delivery';
-import OurAdvantages from './components/our-advantages';
-import Promo from './components/promo';
-import Proposals from './components/proposals';
-import Brands from './components/brands';
+import OurAdvantages from './components/Advantages/our-advantages';
+import Promo from './components/Promo/promo';
+import Proposals from './components/Proposals/proposals';
+import Brands from './components/Brands/brands';
 import Reviews from './components/Reviews/reviews';
 
 export default function Home() {

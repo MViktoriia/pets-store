@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import AdvantagesList from './advantages-list';
-import ButtonLink from './button-link';
-import { CheckIcon } from './icons';
-import Text from './text';
-import { advantages } from '../lib/utils/constants/advantages';
+import ButtonLink from '../button-link';
+import { CheckIcon } from '../icons';
+import Text from '../text';
+import { advantages } from '../../lib/utils/constants/advantages';
+import SectionHeading from '../section-heading';
 
 function OurAdvantages() {
   return (
@@ -12,9 +13,9 @@ function OurAdvantages() {
         <div className="flex flex-col justify-center items-center md:flex-row-reverse">
           <div className="md:pl-[30px] xl:pl-[60px]">
             <div className="">
-              <h2 className=" font-serif text-[24px] text-center font-normal mb-3 lg:text-[36px]">
+              <SectionHeading className=" text-left mb-3 lg:text-[36px]">
                 Чому ми найкращі?
-              </h2>
+              </SectionHeading>
               <Text className=" text-gray mb-6">
                 Ми пропонуємо найякіснішу їжу з натуральних інгредієнтів, щоб
                 забезпечити здоров’я та благополуччя вашого вихованця протягом

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import dog from '../../../public/images/dog-discount-2x.png';
-import ButtonLink from './button-link';
+import dog from '../../../../public/images/dog-discount-2x.png';
+import ButtonLink from '../button-link';
+import SectionHeading from '../section-heading';
 
 function Promo() {
   return (
@@ -18,9 +19,9 @@ function Promo() {
               />
             </div>
             <div className="flex flex-col items-center xl:max-w-[540px]">
-              <h2 className="flex-auto  font-sans text-[18px] text-left font-normal mb-6 xl:text-[36px] xl:font-serif xl:mb-10">
+              <SectionHeading className="flex-auto text-left mb-10 xl:text-[36px]">
                 Зареєструйся та отримай знижку на перше замовлення!
-              </h2>
+              </SectionHeading>
               <ButtonLink
                 href="/programa-loyalnosti"
                 className="px-[44px] py-[7px] xl:px-[64px] xl:py-[10px] border-yellow hover:border-orange hover:text-white hover:bg-yellow active:border-cyan-light xl:"

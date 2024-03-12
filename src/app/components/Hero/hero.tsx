@@ -3,6 +3,7 @@ import ButtonLink from '@/app/components/button-link';
 import Text from '@/app/components/text';
 import Cats from '/public/images/three-cats-hero-section-2x.png';
 import Dog from '/public/images/dog-hero-2x.png';
+import SectionHeading from '../section-heading';
 
 function Hero() {
   return (
@@ -12,9 +13,9 @@ function Hero() {
           <div
             className={`flex flex-col justify-center items-center absolute top-[14px] right-20 w-[260px] h-[110px] bg-yellow rounded-[40px] after:content-triangleMob after:absolute after:bottom-[-7%] after:translate-x-[50%] after:translate-y-[50%] md:right-[40%] md:bottom-2/3 md:w-[31vw] md:h-[15vw] md:after:translate-x-[150%] lg:after:translate-x-[200%] xl:w-[539px] xl:h-[242px] xl:top-[20px] xl:right-[534px] xl:after:w-[70px] xl:after:content-triangle xl:after:translate-x-[430%] xl:after:translate-y-[-45%]`}
           >
-            <Text className="mb-5 md:text-[2vw] xl:text-[36px] xl:mb-[47px] xl:font-serif">
+            <SectionHeading className="mb-5 md:text-[2vw] xl:mb-[47px]">
               Програма лояльності
-            </Text>
+            </SectionHeading>
             <ButtonLink
               href="/programa-loyalnosti"
               className=" border-cyan px-8 py-2 xl:px-[88px] xl:py-[13px] hover:border-orange  hover:text-orange active:text-yellow "

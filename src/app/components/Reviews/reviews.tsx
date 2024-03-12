@@ -15,14 +15,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import clsx from 'clsx';
+import SectionHeading from '../section-heading';
 
 function Reviews() {
   const swiper = useSwiper();
   return (
-    <section className="pt-6 xl:pt-[60px]">
-      <h2 className=" font-serif text-[24px] text-center font-normal mb-6 lg:text-[36px] lg:mb-[57px]">
-        Відгуки
-      </h2>
+    <section className="pt-6 xl:pt-[84px]">
+      <SectionHeading className=" text-center mb-6">Відгуки</SectionHeading>
       <div className=" relative bg-yellow h-[448px] xl:h-[450px] pt-6">
         <div className=" container [&_.swiper-pagination-bullets.swiper-pagination-horizontal]:bottom-[30px] xl:[&_.swiper-pagination-bullets.swiper-pagination-horizontal]:bottom-8 ">
           <div className="flex items-center">
