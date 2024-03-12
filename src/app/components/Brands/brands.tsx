@@ -11,7 +11,7 @@ import SectionHeading from '../section-heading';
 
 function Brends() {
   return (
-    <section className="xl:pt-[60px]">
+    <section className="pt-6 xl:pt-[60px]">
       <div className=" container">
         <SectionHeading className=" text-center mb-6 lg:mb-[48px]">
           Бренди з якими ми працюємо
