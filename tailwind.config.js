@@ -50,8 +50,14 @@ module.exports = {
       crimson: ['var(--font-crimson)'],
     },
     fontSize: {
+      xxl: ['48px', '1.4'],
+      xlMob: ['40px', '1.4'],
+      xl: ['36px', '1.4'],
+      lg: ['24px', '1.4'],
+      mdDesc: ['20px', '1.4'],
+      md: ['18px', '1.4'],
       base: ['16px', '1.4'],
-      sm: ['12px', '1.4'],
+      sm: ['14px', '1.4'],
     },
     content: {
       triangle: 'url("/icons/triangle.svg")',
