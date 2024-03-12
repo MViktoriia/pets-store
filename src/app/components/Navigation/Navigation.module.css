@@ -1,3 +1,11 @@
+.ulScroll{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.ulScroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .navText{
 font-size: 24px;
 font-weight: 400;
@@ -7,7 +15,13 @@ color: white
 }
 .scrollableContainer {
   position: relative;
+ 
 }
+.scrollableContainer::-webkit-scrollbar {
+  width: 0px;  /* ширина scrollbar'a */
+  background: transparent; 
+}
+
 @media (max-width: 768px) {
     .navText {
       font-size: 18px; /* Новый размер шрифта для меньших экранов */
