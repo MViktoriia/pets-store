@@ -6,15 +6,16 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 
-import { brands } from '../lib/utils/constants/brands';
+import { brands } from '../../lib/utils/constants/brands';
+import SectionHeading from '../section-heading';
 
 function Brends() {
   return (
-    <section className="xl:pt-[60px]">
+    <section className="pt-6 xl:pt-[60px]">
       <div className=" container">
-        <h2 className=" font-serif text-[24px] text-center font-normal mb-6 lg:text-[36px] lg:mb-[57px]">
+        <SectionHeading className=" text-center mb-6 lg:mb-[48px]">
           Бренди з якими ми працюємо
-        </h2>
+        </SectionHeading>
         <Swiper
           wrapperTag="ul"
           wrapperClass="items-center"

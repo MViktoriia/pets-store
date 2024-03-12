@@ -1,4 +1,5 @@
-import ProductsList from './products-list';
+import ProductsList from '../products-list';
+import SectionHeading from '../section-heading';
 import ProposalsList from './proposals-list';
 
 function Proposals() {
@@ -272,9 +273,9 @@ function Proposals() {
   return (
     <section className=" pt-6">
       <div className="container">
-        <h2 className=" font-serif text-[24px] text-center font-normal mb-6 lg:text-[36px]">
+        <SectionHeading className=" mb-6 text-center">
           Пропозиції
-        </h2>
+        </SectionHeading>
         <ProposalsList proposals={proposals} />
         <ProductsList products={products} />
       </div>
