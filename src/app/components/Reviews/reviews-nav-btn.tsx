@@ -1,5 +1,4 @@
-import { Children, MouseEventHandler } from 'react';
-import ArrowNextReviewsIcon from '../icons/ArrowPrevReviewsIcon';
+import { MouseEventHandler } from 'react';
 
 export interface ReviewsNavBtnProps {
   children: React.ReactNode;
