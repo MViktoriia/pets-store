@@ -1,4 +1,4 @@
-import ProductsList from '../products-list';
+import ProductsListSlider from './products-list-slider';
 import SectionHeading from '../section-heading';
 import ProposalsList from './proposals-list';
 import { products } from '@/app/lib/utils/constants/products';
@@ -13,7 +13,7 @@ function Proposals() {
           Пропозиції
         </SectionHeading>
         <ProposalsList proposals={proposals} />
-        <ProductsList products={products} />
+        <ProductsListSlider products={products} />
       </div>
     </section>
   );

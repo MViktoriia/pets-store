@@ -1,20 +1,20 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Navigation, Pagination } from 'swiper/modules';
-import ProductCard, { ProductProps } from './product-card';
+import ProductCard, { ProductProps } from '../product-card';
+import ProductsListNavBtn from './products-list-nav-btn';
+import { ArrowNextIcon, ArrowPrevIcon } from '../icons';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
-import ProductsListNavBtn from './products-list-nav-btn';
-import { ArrowNextIcon, ArrowPrevIcon } from './icons';
 
 export interface ProductListProps {
   products: ProductProps[];
 }
 
-function ProductsList({ products }: ProductListProps) {
+function ProductsListSlider({ products }: ProductListProps) {
   return (
     <>
       <Swiper
@@ -25,9 +25,6 @@ function ProductsList({ products }: ProductListProps) {
           type: 'bullets',
           clickable: true,
           el: '#containerForBullets',
-          // bulletClass:
-          //   'inline-block w-3 h-3 mr-3 last:mr-0 rounded-full border border-yellow',
-          // bulletActiveClass: 'bg-yellow',
           dynamicBullets: true,
           dynamicMainBullets: 1,
         }}
@@ -92,7 +89,6 @@ function ProductsList({ products }: ProductListProps) {
       </div>
     </>
   );
-  // absolute text-center transition-opacity z-10 left-1/2 translate-x-[-50%] whitespace-nowrap overflow-hidden md:left-[-50%]
 }
 
-export default ProductsList;
+export default ProductsListSlider;
