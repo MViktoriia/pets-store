@@ -25,6 +25,7 @@ module.exports = {
         DEFAULT: '#3C3C3C',
         ligthMax: '#E8E8E8',
       },
+      transparent: 'transparent',
     },
     container: {
       center: true,
@@ -48,6 +49,7 @@ module.exports = {
       serif: ['var(--font-cormorant)'],
       sans: ['var(--font-montserrat)'],
       crimson: ['var(--font-crimson)'],
+      inter: ['var(--font-inter)'],
     },
     fontSize: {
       xxl: ['48px', '1.4'],
@@ -58,6 +60,7 @@ module.exports = {
       md: ['18px', '1.4'],
       base: ['16px', '1.4'],
       sm: ['14px', '1.4'],
+      xs: ['12px', '1.4'],
     },
     content: {
       triangle: 'url("/icons/triangle.svg")',

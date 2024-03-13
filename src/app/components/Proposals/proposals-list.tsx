@@ -18,7 +18,7 @@ function ProposalsList({ proposals }: ProposalsListProps) {
       {proposals.map((proposal, index) => (
         <li
           key={proposal}
-          className=" text-base mr-8 last:mr-0 hover:text-orange active:text-yellow lg:w-[180px] lg:text-[24px] "
+          className=" text-base mr-[35px] last:mr-0 text-center hover:text-orange active:text-yellow lg:mr-8 lg:text-[24px] "
         >
           <ProposalsItem
             onClick={handleProposalItemClick}

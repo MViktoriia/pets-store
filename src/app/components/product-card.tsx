@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import notFound from '../../../public/images/no-foto.jpg';
+import notFound from '../../../public/images/notFound.png';
 import Link from 'next/link';
-import { Hammersmith_One } from 'next/font/google';
-import { HeartIcon, HeartWithShadowIcon } from './icons';
+import { HeartWithShadowIcon } from './icons';
+import clsx from 'clsx';
+import Rating from './rating';
 
 export interface Manufacturer {
   id: string;
@@ -34,6 +35,10 @@ export interface ProductProps {
   images: Image;
 }
 
+export interface ProductCardProps extends ProductProps {
+  isNew: boolean;
+}
+
 function ProductCard({
   id,
   slug,
@@ -49,24 +54,42 @@ function ProductCard({
   manufacturer,
   description,
   images,
-}: ProductProps) {
+  isNew,
+}: ProductCardProps) {
   return (
-    <Link
-      href="/"
-      className=" inline-block bg-white rounded-[10px] w-[286px] h-[450px] px-4 pt-4 pb-6 shadow-[0_1px_1px_0_rgba(0,0,0,0.25)]"
-    >
-      <div className=" w-[254px] h-[240px] mb-4 rounded-[10px] overflow-hidden ">
-        <Image
-          className=" object-contain"
-          src={image ? image : notFound}
-          alt={`${name} image`}
-        />
+    <div className=" inline-block bg-white rounded-[10px] w-[286px] h-[450px] px-4 pt-4 pb-6 shadow-[0_1px_1px_0_rgba(0,0,0,0.25)]">
+      <div
+        className={clsx(
+          ` relative w-[254px] h-[240px] mb-4 rounded-[10px] overflow-hidden `,
+          isNew
+            ? ` before:content-["Новинка"] before:absolute  before:min-w-[89px] before:px-[10px] before:py-1 before:font-inter before:font-bold before:text-base before:text-white before:bg-cyan-light before:top-[10px] before:left-0 before:rounded-r-[6px]`
+            : '',
+        )}
+      >
+        <Link href="/">
+          <Image
+            className=" object-contain"
+            src={image ? image : notFound}
+            alt={`${name} image`}
+          />
+          <Rating rating={rating} />
+          {disciuntPercentage !== '' && (
+            <span className="absolute min-w-[60px] px-[10px] py-1 text-center font-inter font-bold text-base text-white bg-orange top-[10px] left-0 rounded-r-[6px]">
+              {`
+            ${disciuntPercentage}%`}
+            </span>
+          )}
+        </Link>
       </div>
       <div className=" flex justify-between mb-[30px]">
-        <p className="font-semibold">{name}</p>
+        <Link href="/">
+          <p className="font-semibold">{name}</p>
+        </Link>
         <p className="font-medium">{`${price} грн`}</p>
       </div>
-      <p className="text-sm font-normal text-[#767676] mb-6">{description}</p>
+      <Link href="/">
+        <p className="text-xs font-normal text-[#767676] mb-6">{description}</p>
+      </Link>
       <div className=" flex justify-between items-center">
         <button
           type="button"
@@ -82,7 +105,7 @@ function ProductCard({
           />
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

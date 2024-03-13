@@ -19,18 +19,21 @@ function ProductsList({ products }: ProductListProps) {
     <>
       <Swiper
         wrapperTag="ul"
-        grid={{ rows: 1, fill: 'row' }}
+        wrapperClass="items-center"
+        className="max-w-[286px] md:max-w-[604px] lg:max-w-[922px] xl:max-w-[1240px]"
         pagination={{
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '"> </span>';
-          },
           type: 'bullets',
           clickable: true,
           el: '#containerForBullets',
-          bulletClass:
-            'inline-block w-3 h-3 mr-3 last:mr-0 rounded-full border border-yellow',
-          bulletActiveClass: 'bg-yellow',
+          // bulletClass:
+          //   'inline-block w-3 h-3 mr-3 last:mr-0 rounded-full border border-yellow',
+          // bulletActiveClass: 'bg-yellow',
           dynamicBullets: true,
+          dynamicMainBullets: 1,
+        }}
+        navigation={{
+          nextEl: '#nextBtnProducts',
+          prevEl: '#prevBtnProducts',
         }}
         modules={[Navigation, Pagination, Grid]}
         slidesPerView={1}
@@ -49,12 +52,8 @@ function ProductsList({ products }: ProductListProps) {
           },
         }}
       >
-        {products.map((product) => (
-          <SwiperSlide
-            tag="li"
-            className="w-[286px] flex justify-center items-center"
-            key={product.id}
-          >
+        {products.map((product, index) => (
+          <SwiperSlide tag="li" className="" key={product.id}>
             <ProductCard
               id={product.id}
               slug={product.slug}
@@ -70,24 +69,30 @@ function ProductsList({ products }: ProductListProps) {
               manufacturer={product.manufacturer}
               description={product.description}
               images={product.images}
+              isNew={index < 5}
             ></ProductCard>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-end items-center mt-8">
-        <ProductsListNavBtn>
-          <ArrowPrevIcon className="fill-cyan" />
-        </ProductsListNavBtn>
+      <div className=" relative flex justify-end items-center mt-8 [&>.swiper-pagination-bullets.swiper-pagination-horizontal]:bottom-0 md:[&>.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic]:translate-x-0">
+        <div id="prevBtnProducts" className=" hidden md:block">
+          <ProductsListNavBtn>
+            <ArrowPrevIcon className="fill-cyan" />
+          </ProductsListNavBtn>
+        </div>
         <div
           id="containerForBullets"
-          className=" w-[80px] left-1/2 translate-x-1/2 md:-translate-x-1/2 md:w-[60px] "
+          className="absolute md:static [&>.swiper-pagination-bullet]:w-3 [&>.swiper-pagination-bullet]:h-3 [&>.swiper-pagination-bullet]:border [&>.swiper-pagination-bullet]:border-orange [&>.swiper-pagination-bullet]:bg-transparent [&>.swiper-pagination-bullet]:opacity-100 [&>.swiper-pagination-bullet.swiper-pagination-bullet-active-main]:bg-orange [&>.swiper-pagination-bullets-dynamic.swiper-pagination-bullet-active-prev]:scale-100   "
         ></div>
-        <ProductsListNavBtn>
-          <ArrowNextIcon className="fill-cyan" />
-        </ProductsListNavBtn>
+        <div id="nextBtnProducts" className=" hidden md:block">
+          <ProductsListNavBtn>
+            <ArrowNextIcon className="fill-cyan" />
+          </ProductsListNavBtn>
+        </div>
       </div>
     </>
   );
+  // absolute text-center transition-opacity z-10 left-1/2 translate-x-[-50%] whitespace-nowrap overflow-hidden md:left-[-50%]
 }
 
 export default ProductsList;

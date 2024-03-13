@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cormorant, Crimson_Pro, Montserrat } from 'next/font/google';
+import { Cormorant, Crimson_Pro, Montserrat, Inter } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header/header';
 
@@ -21,6 +21,12 @@ const crimson = Crimson_Pro({
   display: 'swap',
 });
 
+const inter = Inter({
+  subsets: ['cyrillic'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${montserrat.variable} ${crimson.variable}`}
+      className={`${cormorant.variable} ${montserrat.variable} ${crimson.variable} ${inter.variable}`}
     >
       <body>
         <Header />
