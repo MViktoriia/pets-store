@@ -2,6 +2,7 @@ import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import { BirdIcon, CatIcon, DogIcon, FishIcon } from '../icons';
 import styles from './Navigation.module.css'; 
+import NavigationDropDown from './NavigationDropDown';
 
 
 function Navigation(){
@@ -27,8 +28,14 @@ function Navigation(){
         <CategoryIcon category={Category.Fish}  /> <span>Риби</span>
         </li>
      </ul>
+   
+     <NavigationDropDown />
+
+     
        </nav>
+     
        </section>
+
         </>
     )
 }

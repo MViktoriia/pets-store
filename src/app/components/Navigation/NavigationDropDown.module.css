@@ -1,0 +1,23 @@
+.flexContainer {
+    display: flex;
+    height: 514px;
+    border: 4px white solid;
+    border-radius: 20px;
+  }
+  
+  .narrow {
+    width: 80px;
+    text-align: center;
+    margin-right: 80px;
+     /*flex: 1; The first div will take up less space */
+   
+  }
+  .narrow > div {
+    padding-top: 20px;
+    margin: 20px; /* Add margin to all direct children of .narrow */
+  }
+  
+  .wide {
+    flex: 2; /* The second and third divs will take up more space */
+
+  }

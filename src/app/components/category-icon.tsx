@@ -25,7 +25,6 @@ function CategoryIcon({
   switch (category) {
     case 'dog':
       return (
-    
           <DogIcon
             className={clsx(
               'w-[19.72px] h-[19.34px] xl:w-[52px] xl:h-[51px] fill-white hover:fill-yellow inline',
