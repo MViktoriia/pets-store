@@ -3,26 +3,30 @@ import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import Image from 'next/image';
 import dog from  '../../../../public/images/dog-menu-popup-2x.png';
-function NavigationDropDown(){
-    const flexContainer = `${styles.flexContainer} bg-cyan-light` ;
-    const imageContainder = `${styles.wide}`
+type Props = {
+  name: string;
+}
+function NavigationDropDown({name}: Props){
+    const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4` ;
+    const imageContainder = `${styles.wide} hidden md:block`
+    const categoryIcon = `${styles.narrow} hidden md:block`
    return (
     <>
 
     <div className={flexContainer}>
-  <div className={styles.narrow}>
+  <div className={categoryIcon}>
   <div><CategoryIcon category={Category.Dog} /> </div>
     <div> <CategoryIcon category={Category.Cat}  /></div>
     <div> <CategoryIcon category={Category.Bird}  /></div>
     <div><CategoryIcon category={Category.Fish}  /></div>
   </div>
   <div className={styles.wide}>
-    <div className='flex justify-between h-16 items-center w-96 border-b-2 border-yellow'>
+    <div className='flex justify-between md:h-16 items-center md:w-96 border-b-2 border-yellow'>
 <div className=''>
-    <h2 className='font-serif text-white text-xl'>Собаки</h2></div>
+    <h2 className='font-serif text-white text-xl'>{name}</h2></div>
 <div>2</div>
     </div>
-    <div className='grid grid-cols-3 gap-5 mt-2 font-sans text-white'>
+    <div className='grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white'>
   <div className="block">
     <p className='text-lg pb-6'>Харчування</p>
     <ul>

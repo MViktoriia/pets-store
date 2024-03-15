@@ -1,8 +1,6 @@
 .flexContainer {
     display: flex;
     height: 514px;
-    border: 4px white solid;
-    border-radius: 20px;
   }
   
   .narrow {
