@@ -12,7 +12,7 @@ function Navigation(){
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const [nameCategory, setNameCategory] = useState('')
-  function HandleOnclick(event: React.MouseEvent<HTMLSpanElement, MouseEvent>) {
+  function HandleOnclick(event: any) {
     event.isDefaultPrevented();
     const spanValue = event.currentTarget.innerText;
     setDropDownMenu(prevState => !prevState)
