@@ -3,11 +3,12 @@ import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import Image from 'next/image';
 import dog from  '../../../../public/images/dog-menu-popup-2x.png';
+import NavList from './NavList';
 type Props = {
   name: string;
 }
 function NavigationDropDown({name}: Props){
-    const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4` ;
+    const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden` ;
     const imageContainder = `${styles.wide} hidden md:block`
     const categoryIcon = `${styles.narrow} hidden md:block`
    return (
@@ -21,33 +22,18 @@ function NavigationDropDown({name}: Props){
     <div><CategoryIcon category={Category.Fish}  /></div>
   </div>
   <div className={styles.wide}>
-    <div className='flex justify-between md:h-16 items-center md:w-96 border-b-2 border-yellow'>
+    <div className='flex justify-between  md:h-16 items-center md:w-96 border-b-2 border-yellow'>
 <div className=''>
-    <h2 className='font-serif text-white text-xl'>{name}</h2></div>
+    <h2 className='font-serif text-white text-xl font-bold'>{name}</h2></div>
 <div>2</div>
     </div>
     <div className='grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white'>
-  <div className="block">
-    <p className='text-lg pb-6'>Харчування</p>
-    <ul>
-        <li><a>Сухий корм</a></li>
-        <li><a>Вологий корм</a></li>
-        <li><a>Лікувальний корм</a></li>
-        <li><a>Ласощі</a></li>
-    </ul>
-   </div>
-  <div className="block">
-  <p className='text-lg pb-6'>Харчування</p></div>
-  <div className="block">
-  <p className='text-lg pb-6'>Харчування</p>
-  
-  </div>
-  <div className="block">
-  <p className='text-lg pb-6'>Харчування</p></div>
-  <div className="block">
-  <p className='text-lg pb-6'>Харчування</p></div>
-  <div className="block">
-  <p className='text-lg pb-6'>Харчування</p></div>
+  <NavList />
+  <NavList />
+  <NavList />
+  <NavList />
+  <NavList />
+  <NavList />
   </div>
   </div>
  
