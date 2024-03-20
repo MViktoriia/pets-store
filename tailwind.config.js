@@ -15,6 +15,7 @@ module.exports = {
         light: '#68BBBB',
         DEFAULT: '#308D8D',
         dark: '#124B4B',
+        backdrop: 'rgba(18, 75, 75, 0.7)',
       },
       white: '#ffffff',
       black: '#000000',
