@@ -20,4 +20,5 @@ export { default as LogoIcon } from './LogoIcon';
 export { default as MagnifyingglassIcon } from './MagnifyingglassIcon';
 export { default as PawsIcon } from './PawsIcon';
 export { default as PhoneIcon } from './PhoneIcon';
+export { default as PhoneWhithFillIcon } from './PhoneWithFillIcon';
 export { default as StarIcon } from './StarIcon';
