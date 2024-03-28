@@ -72,7 +72,7 @@ function ProductCard({
             src={image ? image : notFound}
             alt={`${name} image`}
           />
-          <Rating rating={rating} />
+          <Rating rating={rating} className="absolute top-[10px] right-0 " />
           {disciuntPercentage !== '' && (
             <span className="absolute min-w-[60px] px-[10px] py-1 text-center font-inter font-bold text-base text-white bg-orange top-[10px] left-0 rounded-r-[6px]">
               {`
