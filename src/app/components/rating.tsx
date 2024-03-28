@@ -3,11 +3,14 @@ import { StarIcon } from './icons';
 
 export interface RatingProps {
   rating: string;
+  className?: string;
 }
 
-function Rating({ rating }: RatingProps) {
+function Rating({ rating, className }: RatingProps) {
   return (
-    <div className="absolute top-[10px] right-0 w-[116px] h-[18px] flex gap-1">
+    <div
+      className={`w-[116px] h-[18px] flex gap-1 ${className}`}
+    >
       <span className="w-[18px] h-[18px]">
         <StarIcon
           className={clsx(Number(rating) >= 0.5 && '[&>path]:fill-yellow')}
