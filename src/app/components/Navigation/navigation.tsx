@@ -12,11 +12,13 @@ function Navigation(){
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const [nameCategory, setNameCategory] = useState('')
+  const [clicked, setClicked] = useState(false);
   function HandleOnclick(event: any) {
     event.isDefaultPrevented();
     const spanValue = event.currentTarget.innerText;
     setDropDownMenu(prevState => !prevState)
     setNameCategory(spanValue);
+    setClicked(!clicked);
     console.log('Значение span:', spanValue);
   }
   return(
@@ -24,14 +26,17 @@ function Navigation(){
        <section className="bg-cyan">
        <nav className={navClasses}>
      <ul  className={ulClasses}>
-       <li className="md:flex-1 text-center mx-2 px-3 shrink-0">
-      <a href="#" onClick={HandleOnclick}><CategoryIcon category={Category.Dog}  /> <span>Собаки</span></a> 
+       <li className={`md:flex-1 text-center px-3 mx-2 shrink-0 h-full md:grid items-center	 ${clicked ? 'bg-cyan rounded-md' : ''}`}>
+   <a href="#" onClick={HandleOnclick}><CategoryIcon category={Category.Dog}  /> <span>Собаки</span></a> 
          {/* <DogIcon className="inline" /> */}
+      
  </li>
-       <li className="md:flex-1 text-center px-3  mx-2 shrink-0">
-       <a href="#" onClick={HandleOnclick}>  <CategoryIcon category={Category.Cat}  /> <span>Коти</span> 
-       </a>
-       </li>
+ <li className={`md:flex-1 text-center px-3 mx-2 shrink-0 h-full md:grid items-center	 ${clicked ? 'bg-cyan rounded-md' : ''}`} onClick={HandleOnclick}>
+            <a href="#" className='inline-block w-full'>
+                <CategoryIcon category={Category.Cat} />
+                <span className="">Коти</span> 
+            </a>
+        </li>
        <li className="md:flex-1 text-center px-3  mx-2 shrink-0"> 
        {/* <BirdIcon className="inline"/> Птахи */}
        <CategoryIcon category={Category.Bird}  /> <span>Птахи</span>
