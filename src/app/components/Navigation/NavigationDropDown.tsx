@@ -2,12 +2,13 @@ import styles from './NavigationDropDown.module.css'
 import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import Image from 'next/image';
-import dog from  '../../../../public/images/dog-menu-popup-2x.png';
+import imgUrl from  '../../../../public/images/dog-menu-popup-2x.png';
 import NavList from './NavList';
 type Props = {
   name: string;
+  img: string;
 }
-function NavigationDropDown({name}: Props){
+function NavigationDropDown({name, img}: Props){
     const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden` ;
     const imageContainder = `${styles.wide} hidden md:block`
     const categoryIcon = `${styles.narrow} hidden md:block`
@@ -39,7 +40,7 @@ function NavigationDropDown({name}: Props){
  
   <div className={imageContainder}>
   <div className="flex justify-center items-end h-full">
-        <Image src={dog}  alt="Описание изображения" width={348} height={300} />
+        <Image src={`/images/${img}-menu-popup-2x.png`}  alt="Описание изображения" width={348} height={300} />
 </div>
     
   </div>
