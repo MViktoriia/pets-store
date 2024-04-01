@@ -7,7 +7,10 @@ interface PhoneProps {
 
 function Phone({ isFilled, className }: PhoneProps) {
   return (
-    <div className={`flex items-center ${className}`}>
+    <a
+      className={`flex items-center gap-2 ${className}`}
+      href="tel:+380674478103"
+    >
       {isFilled ? (
         <div className="flex justify-center items-center w-[50px] h-[50px]">
           <PhoneWhithFillIcon width={35} height={35} />
@@ -21,8 +24,9 @@ function Phone({ isFilled, className }: PhoneProps) {
           />
         </div>
       )}
+
       <p>+38(067) 447-81-03</p>
-    </div>
+    </a>
   );
 }
 
