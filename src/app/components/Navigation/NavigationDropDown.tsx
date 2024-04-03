@@ -7,20 +7,24 @@ import NavList from './NavList';
 type Props = {
   name: string;
   img: string;
+  onNameChange: (name:string, key:string) => void;  
 }
-function NavigationDropDown({name, img}: Props){
+function NavigationDropDown({name, img, onNameChange}: Props){
     const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden` ;
     const imageContainder = `${styles.wide} hidden md:block`
     const categoryIcon = `${styles.narrow} hidden md:block`
+    const handleCategoryClick = (newName:string, key:string) => {
+      onNameChange(newName, key);
+    };
    return (
     <>
 
     <div className={flexContainer}>
   <div className={categoryIcon}>
-  <div><CategoryIcon category={Category.Dog} /> </div>
-    <div> <CategoryIcon category={Category.Cat}  /></div>
-    <div> <CategoryIcon category={Category.Bird}  /></div>
-    <div><CategoryIcon category={Category.Fish}  /></div>
+  <div onClick={() => handleCategoryClick('Собаки','dog')}><CategoryIcon category={Category.Dog} /> </div>
+    <div onClick={() => handleCategoryClick('Коти','cat')}> <CategoryIcon category={Category.Cat} /></div>
+    <div onClick={() => handleCategoryClick('Птахи','bird')}> <CategoryIcon category={Category.Bird}  /></div>
+    <div onClick={() => handleCategoryClick('Риби','fish')}><CategoryIcon category={Category.Fish}  /></div>
   </div>
   <div className={styles.wide}>
     <div className='flex justify-between  md:h-16 items-center md:w-96 border-b-2 border-yellow'>

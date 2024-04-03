@@ -29,6 +29,11 @@ function Navigation(){
     setNameCategory(spanValue);
     setNewNameKey(key);
   }
+  const handleNameChange = (newName: string, key: string) => {
+    setNameCategory(newName);
+    setNewNameKey(key)
+    setClicked(key)
+  };
   return(
        <>
        <section className="bg-cyan">
@@ -37,8 +42,12 @@ function Navigation(){
      
       <li
           key='dog'
-          className={`md:flex-1 text-center px-3 mx-2 shrink-0 h-full md:grid items-center	 ${clicked === 'dog' ? 'bg-cyan rounded-md' : ''}`}>
-          <a href="#" onClick={(e) => HandleOnclick(e,'dog')}><CategoryIcon category={Category.Dog}  /><span>Собаки</span></a>
+          className={`md:flex-1 text-center px-3 mx-2 shrink-0 h-full md:grid items-center	 ${clicked === 'dog' ? 'bg-cyan rounded-md' : ''}`}
+         
+          >
+          <a href="#" onClick={(e) => HandleOnclick(e,'dog')}>
+            <CategoryIcon category={Category.Dog}  /><span>Собаки</span>
+            </a>
         </li>
 
     
@@ -61,7 +70,7 @@ function Navigation(){
         </li>
      </ul>
    
-     {dropDownMenu && <NavigationDropDown name={nameCategory} img={nameKey} />}
+     {dropDownMenu && <NavigationDropDown name={nameCategory} img={nameKey}  onNameChange={handleNameChange} />}
 
      
        </nav>
