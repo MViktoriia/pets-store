@@ -1,0 +1,26 @@
+.phoneNumber {
+  background: #ffc54b;
+  width: 90px;
+  padding: 0 20 0 20;
+}
+
+.phoneNumber p {
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  left: -245%;
+  background: #ffc54b;
+  padding: 12.5px 24px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #308d8d;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translateX(150%);
+}
+
+.phoneNumber:hover p {
+  transform: translateX(0%);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+}
