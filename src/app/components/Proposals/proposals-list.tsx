@@ -1,18 +1,13 @@
-'use client';
-
-import { SyntheticEvent, useState } from 'react';
+import { MouseEventHandler } from 'react';
 import ProposalsItem from './proposals-item';
 
 export interface ProposalsListProps {
   proposals: string[];
+  onClick: MouseEventHandler<HTMLButtonElement>;
+  isCurrent: boolean;
 }
 
-function ProposalsList({ proposals }: ProposalsListProps) {
-  const [isCurrent, setIsCurrent] = useState(false);
-  const handleProposalItemClick = (e: SyntheticEvent) => {
-    console.log(e.currentTarget);
-  };
-
+function ProposalsList({ proposals, onClick, isCurrent }: ProposalsListProps) {
   return (
     <ul className="flex justify-start items-center mb-6">
       {proposals.map((proposal, index) => (
@@ -20,10 +15,7 @@ function ProposalsList({ proposals }: ProposalsListProps) {
           key={proposal}
           className=" text-base mr-[35px] last:mr-0 text-center hover:text-orange active:text-yellow lg:mr-8 lg:text-[24px] "
         >
-          <ProposalsItem
-            onClick={handleProposalItemClick}
-            current={index === 0 && true}
-          >
+          <ProposalsItem onClick={onClick} current={isCurrent}>
             {proposal}
           </ProposalsItem>
         </li>
