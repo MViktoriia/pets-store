@@ -61,7 +61,7 @@ function ProductCard({
       <div
         className={clsx(
           ` relative w-[254px] h-[240px] mb-4 rounded-[10px] overflow-hidden `,
-          isNew
+          isNew && disciuntPercentage == ''
             ? ` before:content-["Новинка"] before:absolute  before:min-w-[89px] before:px-[10px] before:py-1 before:font-inter before:font-bold before:text-base before:text-white before:bg-cyan-light before:top-[10px] before:left-0 before:rounded-r-[6px]`
             : '',
         )}
