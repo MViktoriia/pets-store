@@ -3,7 +3,7 @@
 import ProductsListSlider from './products-list-slider';
 import SectionHeading from '../section-heading';
 import ProposalsList from './proposals-list';
-import { products } from '@/app/lib/utils/constants/products';
+import { products } from '@/lib/utils/constants/products';
 import { SyntheticEvent, useState } from 'react';
 import ProposalsItem from './proposals-item';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import DeliveryItem from './delivery-item';
-import { deliverySectionText } from '../../lib/utils/constants/deliveryItems';
+import { deliverySectionText } from '../../../lib/utils/constants/deliveryItems';
 import SectionHeading from '../section-heading';
 import DeliveryItemIcon from './delivery-item-icon';
 

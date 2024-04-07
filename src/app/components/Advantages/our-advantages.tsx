@@ -2,7 +2,7 @@ import Image from 'next/image';
 import AdvantagesList from './advantages-list';
 import ButtonLink from '../button-link';
 import Text from '../text';
-import { advantages } from '../../lib/utils/constants/advantages';
+import { advantages } from '../../../lib/utils/constants/advantages';
 import SectionHeading from '../section-heading';
 
 function OurAdvantages() {
