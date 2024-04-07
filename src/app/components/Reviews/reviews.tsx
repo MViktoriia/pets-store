@@ -5,7 +5,7 @@ import Image from 'next/image';
 import cat from '../../../../public/images/cat-reviews-2x.png';
 import dog from '../../../../public/images/dog-reviews-2x.png';
 import ReviewCard from './review-card';
-import { reviews } from '@/app/lib/utils/constants/reviews';
+import { reviews } from '@/lib/utils/constants/reviews';
 import ReviewsNavBtn from './reviews-nav-btn';
 import { ArrowPrevReviewsIcon } from '../icons';
 import { ArrowNextReviewsIcon } from '../icons';

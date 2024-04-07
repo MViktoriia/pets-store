@@ -5,37 +5,9 @@ import { HeartWithShadowIcon } from './icons';
 import clsx from 'clsx';
 import Rating from './rating';
 
-export interface Manufacturer {
-  id: string;
-  trade_brand: string;
-  country: string;
-  country_brand_registration: string;
-}
+import { Product } from '@/lib/types';
 
-export interface Image {
-  id: string /*need to clarify the type */;
-  image: string /*need to clarify the type */;
-  product: string /*need to clarify the type */;
-}
-
-export interface ProductProps {
-  id: string;
-  slug: string;
-  name: string;
-  productCode: string;
-  price: string;
-  priceDiscount: string;
-  categories: string;
-  disciuntPercentage: string;
-  typesProduct: string /*need to clarify what is it and it type */;
-  image: string;
-  rating: string;
-  manufacturer: Manufacturer;
-  description: string;
-  images: Image;
-}
-
-export interface ProductCardProps extends ProductProps {
+export interface ProductCardProps extends Product {
   isNew: boolean;
 }
 
@@ -56,6 +28,8 @@ function ProductCard({
   images,
   isNew,
 }: ProductCardProps) {
+  const productPageLink = `/${slug}`;
+
   return (
     <div className=" inline-block bg-white rounded-[10px] w-[286px] h-[450px] px-4 pt-4 pb-6 shadow-[0_1px_1px_0_rgba(0,0,0,0.25)]">
       <div
@@ -66,7 +40,7 @@ function ProductCard({
             : '',
         )}
       >
-        <Link href="/">
+        <Link href={productPageLink}>
           <Image
             className=" object-contain"
             src={image ? image : notFound}
@@ -81,13 +55,25 @@ function ProductCard({
           )}
         </Link>
       </div>
-      <div className=" flex justify-between mb-[30px]">
-        <Link href="/">
+      <div className=" flex justify-between mb-4">
+        <Link href={productPageLink}>
           <p className="font-semibold">{name}</p>
         </Link>
-        <p className="font-medium">{`${price} грн`}</p>
+        <div className=" font-medium leading-[121%]">
+          {disciuntPercentage == '' ? (
+            <p>{`${price} грн`}</p>
+          ) : (
+            <p>{`${priceDiscount} грн`}</p>
+          )}
+          <p
+            className={clsx(
+              'text-sm text-[#ADADAD] line-through',
+              disciuntPercentage == '' ? ' invisible' : '',
+            )}
+          >{`${price} грн`}</p>
+        </div>
       </div>
-      <Link href="/">
+      <Link href={productPageLink}>
         <p className="text-xs font-normal text-[#767676] mb-6">{description}</p>
       </Link>
       <div className=" flex justify-between items-center">
