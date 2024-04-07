@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
 export interface ProductListProps {
-  products: ProductProps[];
+  products?: ProductProps[];
 }
 
 function ProductsListSlider({ products }: ProductListProps) {
@@ -38,18 +38,16 @@ function ProductsListSlider({ products }: ProductListProps) {
         breakpoints={{
           768: { slidesPerView: 2, grid: { rows: 2, fill: 'row' } },
           1024: {
-            navigation: true,
             slidesPerView: 3,
             grid: { rows: 2, fill: 'row' },
           },
           1440: {
             slidesPerView: 4,
-            navigation: true,
             grid: { rows: 2, fill: 'row' },
           },
         }}
       >
-        {products.map((product, index) => (
+        {products?.map((product, index) => (
           <SwiperSlide tag="li" className="" key={product.id}>
             <ProductCard
               id={product.id}
@@ -66,7 +64,7 @@ function ProductsListSlider({ products }: ProductListProps) {
               manufacturer={product.manufacturer}
               description={product.description}
               images={product.images}
-              isNew={index < 5}
+              isNew={index < 10}
             ></ProductCard>
           </SwiperSlide>
         ))}

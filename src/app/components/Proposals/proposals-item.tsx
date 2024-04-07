@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import { MouseEventHandler } from 'react';
+import { EventHandler, MouseEventHandler } from 'react';
 
 export interface ProposalsItemProps {
   current?: boolean;
   children: React.ReactNode;
-  onClick: MouseEventHandler;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function ProposalsItem({
