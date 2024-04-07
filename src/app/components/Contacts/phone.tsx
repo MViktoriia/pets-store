@@ -12,7 +12,7 @@ function Phone({ isFilled, className }: PhoneProps) {
       href="tel:+380674478103"
     >
       {isFilled ? (
-        <div className="flex justify-center items-center w-[50px] h-[50px]">
+        <div className="flex justify-center items-center w-[50px] h-[50px] hover:scale-[120%] hover:transition-transform hover:ease-linear hover:duration-300 active:scale-100">
           <PhoneWhithFillIcon width={35} height={35} />
         </div>
       ) : (
@@ -24,7 +24,6 @@ function Phone({ isFilled, className }: PhoneProps) {
           />
         </div>
       )}
-
       <p>+38(067) 447-81-03</p>
     </a>
   );
