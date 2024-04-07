@@ -2,6 +2,7 @@ import React from 'react';
 import { Cormorant, Crimson_Pro, Montserrat, Inter } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header/header';
+import SideContactPanel from './components/SideContactsPanel/side-contact-panel';
 
 const cormorant = Cormorant({
   subsets: ['latin', 'cyrillic'],
@@ -39,6 +40,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
+        <SideContactPanel />
         {children}
       </body>
     </html>

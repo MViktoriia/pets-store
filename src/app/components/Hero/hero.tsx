@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import ButtonLink from '@/app/components/button-link';
-import Text from '@/app/components/text';
 import Cats from '/public/images/three-cats-hero-section-2x.png';
 import Dog from '/public/images/dog-hero-2x.png';
 import SectionHeading from '../section-heading';
-import SideContactPanel from '../SideContactsPanel/side-contact-panel';
 
 function Hero() {
   return (
@@ -31,7 +29,6 @@ function Hero() {
         <div className="w-[122px] h-[79px] absolute bottom-0 md:w-[33vw] md:h-[21vw] lg:w-[36vw] lg:h-[23vw] xl:w-[445px] xl:h-[287px]">
           <Image src={Cats} fill={true} alt="three cats sitting" />
         </div>
-        <SideContactPanel />
       </div>
     </section>
   );
