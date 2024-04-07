@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 
-import { brands } from '../../lib/utils/constants/brands';
+import { brands } from '../../../lib/utils/constants/brands';
 import SectionHeading from '../section-heading';
 
 function Brends() {
