@@ -1,10 +1,19 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import dog from '../../../../public/images/dog-discount-2x.png';
-import ButtonLink from '../button-link';
 import SectionHeading from '../section-heading';
+import Modal from '../Modal/modal';
+import ButtonSecondary from '../button-secondary';
+import Socials from '../Socials/socials';
 
 function Promo() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpenClose = () => {
+    setIsModalOpen((prevState) => !prevState);
+  };
+
   return (
     <section className=" pt-6">
       <div className=" container">
@@ -22,16 +31,41 @@ function Promo() {
               <SectionHeading className="flex-auto text-left mb-10 xl:text-[36px]">
                 Зареєструйся та отримай знижку на перше замовлення!
               </SectionHeading>
-              <ButtonLink
-                href="/programa-loyalnosti"
+              <ButtonSecondary
+                onClick={handleModalOpenClose}
                 className="px-[44px] py-[7px] xl:px-[64px] xl:py-[10px] border-yellow hover:border-orange hover:text-white hover:bg-yellow active:border-cyan-light xl:"
               >
                 Стати своїм
-              </ButtonLink>
+              </ButtonSecondary>
             </div>
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleModalOpenClose}
+        className="[&>#modalContent]:py-8 [&>#modalContent]:px-[13px] "
+      >
+        <div>
+          <div className="flex items-center justify-center">
+            <div className=" relative flex-auto min-w-[135px] h-auto xl:max-w-[261px] after:content-['-10%'] after:w-[62px] after:absolute after:text-[26px] after:font-bold after:font-crimson after:text-orange after:top-[55%] after:left-[23%] after:text-center md:after:text-[3.3em] md:after:w-[119px] xl:after:w-[136px] xl:after:text-[64px]">
+              <Image
+                width={261}
+                height={261}
+                src={dog}
+                alt="a small dog with a sheet of paper in its paws"
+              />
+            </div>
+            <div>
+              <p>Отримай знижку 10%</p>
+            </div>
+          </div>
+          <div>
+            <p>Підпишіться на ексклюзивні оновлення</p>
+            <Socials className="w-[198px]" />
+          </div>
+        </div>
+      </Modal>
     </section>
   );
 }

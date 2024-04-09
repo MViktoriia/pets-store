@@ -43,6 +43,7 @@ module.exports = {
       md: '10px',
       lg: '0.5rem',
       xl: '20px',
+      xxl: '40px',
       full: '9999px',
       large: '12px',
     },
