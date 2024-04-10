@@ -6,7 +6,7 @@ function Backdrop({ isOpen, children }: BackdropProps) {
   return (
     <div
       className={clsx(
-        'absolute top-0 right-0 w-[100vw] h-full z-20 bg-cyan-backdrop transition-opacity ',
+        'fixed top-0 right-0 w-[100vw] h-full z-20 bg-cyan-backdrop transition-opacity overflow-y-scroll ',
         isOpen ? ' opacity-1' : ' opacity-0 pointer-events-none',
       )}
     >
