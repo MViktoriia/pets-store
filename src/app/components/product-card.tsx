@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import Rating from './rating';
 
 import { Product } from '@/lib/types';
+import ButtonSecondary from './button-secondary';
 
 export interface ProductCardProps extends Product {
   isNew: boolean;
@@ -29,6 +30,9 @@ function ProductCard({
   isNew,
 }: ProductCardProps) {
   const productPageLink = `/${slug}`;
+  const handleBuyBtn = () => {
+    console.log(`Товар ${name} додано в корзину`);
+  };
 
   return (
     <div className=" inline-block bg-white rounded-[10px] w-[286px] h-[450px] px-4 pt-4 pb-6 shadow-[0_1px_1px_0_rgba(0,0,0,0.25)]">
@@ -77,12 +81,13 @@ function ProductCard({
         <p className="text-xs font-normal text-[#767676] mb-6">{description}</p>
       </Link>
       <div className=" flex justify-between items-center">
-        <button
+        <ButtonSecondary
+          onClick={handleBuyBtn}
           type="button"
           className="border border-solid border-yellow rounded-md text-[18px] px-[60px] py-2 hover:bg-yellow hover:border-orange hover:text-white active:border-cyan-light transition-colors"
         >
           Купити
-        </button>
+        </ButtonSecondary>
         <div className=" flex justify-center items-center w-[41px] h-[41px]">
           <HeartWithShadowIcon
             width={32}
