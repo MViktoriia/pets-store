@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { useState } from 'react';
 import { BirdIcon, CatIcon, DogIcon, FishIcon } from './icons';
 import clsx from 'clsx';
 
@@ -22,16 +23,26 @@ function CategoryIcon({
   ...rest
 }: CategoryIconProps &
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
+
+    const [isActive, setIsActive] = useState(false);
+
+   
+    const handleClick = () => {
+      setIsActive(!isActive);
+      console.log(isActive)
+    };
+
+
   switch (category) {
     case 'dog':
       return (
           <DogIcon
             className={clsx(
               'w-[19.72px] h-[19.34px] xl:w-[52px] xl:h-[51px] fill-white hover:fill-yellow inline',
-              active && ' fill-orange',
-              disabled && 'cursor-not-allowed',
+              isActive && ' fill-yellow',
+             
             )}
-          />
+           onClick={handleClick} />
  
       );
     case 'cat':

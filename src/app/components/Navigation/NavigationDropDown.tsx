@@ -4,15 +4,26 @@ import { Category } from '../../components/category-icon'
 import Image from 'next/image';
 import imgUrl from  '../../../../public/images/dog-menu-popup-2x.png';
 import NavList from './NavList';
+
+interface Subcategory {
+  id: string;
+  name: string;
+}
+interface ElementObject {
+  id: string;
+  subcategories: Subcategory[];
+}
 type Props = {
   name: string;
   img: string;
+  elementObj: ElementObject;
   onNameChange: (name:string, key:string) => void;  
 }
-function NavigationDropDown({name, img, onNameChange}: Props){
+function NavigationDropDown({name, img, elementObj, onNameChange}: Props){
     const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden` ;
     const imageContainder = `${styles.wide} hidden md:block`
     const categoryIcon = `${styles.narrow} hidden md:block`
+    
     const handleCategoryClick = (newName:string, key:string) => {
       onNameChange(newName, key);
     };
@@ -33,12 +44,15 @@ function NavigationDropDown({name, img, onNameChange}: Props){
 <div>2</div>
     </div>
     <div className='grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white'>
+      {elementObj && elementObj.subcategories.map((element, index)=>(
+        <NavList key={index} name={element.name} elementObj={element}  />
+      ))}
+  {/* <NavList />
   <NavList />
   <NavList />
   <NavList />
   <NavList />
-  <NavList />
-  <NavList />
+  <NavList /> */}
   </div>
   </div>
  

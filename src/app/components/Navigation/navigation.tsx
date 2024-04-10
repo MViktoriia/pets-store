@@ -1,10 +1,12 @@
 'use client'
 import { MouseEvent, useState } from 'react';
+import fetchCategories from '@/services/api/categories';
 import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import { BirdIcon, CatIcon, DogIcon, FishIcon } from '../icons';
 import styles from './Navigation.module.css'; 
 import NavigationDropDown from './NavigationDropDown';
+import { categories } from '../../../lib/utils/constants/categories';
 
 
 function Navigation(){
@@ -18,7 +20,9 @@ function Navigation(){
     event.isDefaultPrevented();
     const spanValue = event.currentTarget.innerText;
     if(nameKey !== key){
-      console.log('hej')
+      console.log(key)
+     // fetchCategories();
+     //console.log(categories[0].results[0].name)
       setDropDownMenu(true)
       setClicked(key)
     }else{
@@ -26,6 +30,7 @@ function Navigation(){
       setClicked('')
     }
    // dropDownMenu ? setClicked('') : setClicked(key);
+   console.log(spanValue)
     setNameCategory(spanValue);
     setNewNameKey(key);
   }
@@ -33,6 +38,7 @@ function Navigation(){
     setNameCategory(newName);
     setNewNameKey(key)
     setClicked(key)
+   
   };
   return(
        <>
@@ -60,17 +66,21 @@ function Navigation(){
        <li className={`md:flex-1 text-center px-3  mx-2 shrink-0 h-full md:grid items-center  ${clicked === 'bird' ? 'bg-cyan rounded-md' : ''}`}> 
        {/* <BirdIcon className="inline"/> Птахи */}
     <a href="#" className='inline-block w-full' onClick={(e) => HandleOnclick(e,'bird')}>
-    <CategoryIcon category={Category.Bird}  /> <span>Птахи</span>
+    <CategoryIcon category={Category.Bird}  /><span>Птахи</span>
       </a>   
        </li>
        <li className={`md:flex-1 text-center px-3  mx-2 shrink-0 h-full md:grid items-center  ${clicked === 'fish' ? 'bg-cyan rounded-md' : ''}`}>
         {/* <FishIcon  className="inline"/> Риби */}
-        <a href="#" className='inline-block w-full' onClick={(e) => HandleOnclick(e,'fish')}>  <CategoryIcon category={Category.Fish}  /> <span>Риби</span>
+        <a href="#" className='inline-block w-full' onClick={(e) => HandleOnclick(e,'fish')}>  <CategoryIcon category={Category.Fish}  /><span>Риби</span>
         </a>
         </li>
      </ul>
-   
-     {dropDownMenu && <NavigationDropDown name={nameCategory} img={nameKey}  onNameChange={handleNameChange} />}
+     {dropDownMenu && categories[0].results
+  .filter(element => element.name === nameCategory)
+  .map((element, index) => (
+    <NavigationDropDown key={index} name={nameCategory} img={nameKey} onNameChange={handleNameChange} elementObj={element} />
+  ))}
+    {/* {dropDownMenu && <NavigationDropDown name={nameCategory} img={nameKey}  onNameChange={handleNameChange} />} */}
 
      
        </nav>
