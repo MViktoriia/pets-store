@@ -7,7 +7,7 @@ import Navigation from '../Navigation/navigation';
 import BurgerMenu from '../BurgerMenu/burger-menu';
 
 import { useState } from 'react';
-import Backdrop from '../Backdrop/backdrop';
+import Backdrop from '../BurgerMenu/backdrop';
 
 function Header() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
