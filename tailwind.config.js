@@ -59,6 +59,7 @@ module.exports = {
       xl: ['36px', '1.4'],
       lg: ['24px', '1.4'],
       mdDesc: ['20px', '1.4'],
+      mdLiNav: ['22px', '1.4'],
       md: ['18px', '1.4'],
       base: ['16px', '1.4'],
       sm: ['14px', '1.4'],

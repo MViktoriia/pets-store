@@ -39,8 +39,8 @@ function CategoryIcon({
           <DogIcon
             className={clsx(
               'w-[19.72px] h-[19.34px] xl:w-[52px] xl:h-[51px] fill-white hover:fill-yellow inline',
-              isActive && ' fill-yellow',
-             
+              active && ' fill-yellow',
+              isActive && ' fill-yellow'
             )}
            onClick={handleClick} />
  
@@ -51,7 +51,7 @@ function CategoryIcon({
           <CatIcon
             className={clsx(
               'w-[22px] h-[21.63px] xl:w-[51px] xl:h-[51px] fill-white hover:fill-yellow inline',
-              active && ' fill-orange',
+              active && ' fill-yellow',
               disabled && 'cursor-not-allowed',
             )}
           />
@@ -63,7 +63,7 @@ function CategoryIcon({
           <BirdIcon
             className={clsx(
               'w-[12px] h-[22px] xl:w-[26px] xl:h-[51px] fill-white hover:fill-yellow inline',
-              active && ' fill-orange',
+              active && ' fill-yellow',
               disabled && 'cursor-not-allowed',
             )}
           />
@@ -75,7 +75,7 @@ function CategoryIcon({
           <FishIcon
             className={clsx(
               'w-[19px] h-[22px] xl:w-[44px] xl:h-[51px] fill-white hover:fill-yellow inline',
-              active && ' fill-orange',
+              active && ' fill-yellow',
               disabled && 'cursor-not-allowed',
             )}
           />
