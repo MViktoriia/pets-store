@@ -1,6 +1,7 @@
 export { default as ArrowNextReviewsIcon } from './ArrowNextReviewsIcon';
 export { default as ArrowPrevReviewsIcon } from './ArrowPrevReviewsIcon';
 export { default as ArrowNextIcon } from './ArrowNextIcon';
+export { default as Wave } from './Wave';
 export { default as ArrowPrevIcon } from './ArrowPrevIcon';
 export { default as BirdIcon } from './BirdIcon';
 export { default as CartIcon } from './CartIcon';

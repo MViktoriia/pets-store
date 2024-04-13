@@ -1,0 +1,9 @@
+.wave{
+  stroke: none; fill: #48C9B0;
+}
+.wave2{
+  background-color: #F4D03F; overflow: hidden;
+}
+.wave3{
+  height: 100px; width: 100%;
+}
