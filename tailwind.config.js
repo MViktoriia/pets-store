@@ -78,6 +78,8 @@ module.exports = {
         92: '343px',
         26: '6.25rem',
         29: '115.2px',
+        97: '480px',
+        34: '136px'
       },
       backgroundImage: {
         salesBanerImage: "url('/images/dog-banner-sales-2x.png')",
