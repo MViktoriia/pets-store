@@ -61,6 +61,7 @@ module.exports = {
       mdDesc: ['20px', '1.4'],
       md: ['18px', '1.4'],
       base: ['16px', '1.4'],
+      baseM: ['16px', '22.4px'],
       sm: ['14px', '1.4'],
       xs: ['12px', '1.4'],
     },
@@ -78,7 +79,8 @@ module.exports = {
         26: '6.25rem',
         29: '115.2px',
         97: '480px',
-        34: '136px'
+        34: '136px',
+        63: '250px'
       },
       backgroundImage: {
         salesBanerImage: "url('/images/dog-banner-sales-2x.png')",
