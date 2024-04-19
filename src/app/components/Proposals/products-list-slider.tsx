@@ -1,7 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Navigation, Pagination } from 'swiper/modules';
-import ProductCard from '../product-card';
+import ProductCard from '../ProductCard/product-card';
 import ProductsListNavBtn from './products-list-nav-btn';
 import { ArrowNextIcon, ArrowPrevIcon } from '../icons';
 import { Product } from '@/lib/types';
@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
 export interface ProductListProps {
-  products?: Product[];
+  products: Product[];
 }
 
 function ProductsListSlider({ products }: ProductListProps) {
@@ -58,13 +58,11 @@ function ProductsListSlider({ products }: ProductListProps) {
               price={product.price}
               priceDiscount={product.priceDiscount}
               categories={product.categories}
-              disciuntPercentage={product.disciuntPercentage}
+              discountPercentage={product.discountPercentage}
               typesProduct={product.typesProduct}
               image={product.image}
               rating={product.rating}
-              manufacturer={product.manufacturer}
-              description={product.description}
-              images={product.images}
+              descriptionShort={product.descriptionShort}
               isNew={index < 10}
             ></ProductCard>
           </SwiperSlide>

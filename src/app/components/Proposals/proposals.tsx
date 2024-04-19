@@ -2,13 +2,17 @@
 
 import ProductsListSlider from './products-list-slider';
 import SectionHeading from '../section-heading';
-import ProposalsList from './proposals-list';
-import { products } from '@/lib/utils/constants/products';
 import { SyntheticEvent, useState } from 'react';
-import ProposalsItem from './proposals-item';
+import { Product } from '@/lib/types';
+import ProposalsList from './proposals-list';
 
-function Proposals() {
+interface ProposalsProps {
+  products: Product[];
+}
+
+function Proposals({ products }: ProposalsProps) {
   const proposals = ['Новинки', 'Популярні товари', 'Акції'];
+  const productsList = [...products];
 
   const [current, setCurrent] = useState('Новинки');
   const [productsForRender, setProductForRender] = useState(
@@ -23,12 +27,12 @@ function Proposals() {
         break;
       case 'Акції':
         setProductForRender(
-          products.filter((product) => product.priceDiscount != ''),
+          products.filter((product) => product?.priceDiscount != ''),
         );
         break;
       case 'Популярні товари':
         setProductForRender(
-          products.sort((a, b) => Number(b.rating) - Number(a.rating)),
+          productsList.sort((a, b) => Number(b.rating) - Number(a.rating)),
         );
         break;
 
@@ -43,21 +47,11 @@ function Proposals() {
         <SectionHeading className=" mb-6 text-center xl:mb-8">
           Пропозиції
         </SectionHeading>
-        <ul className="flex justify-start items-center mb-6">
-          {proposals.map((proposal, index) => (
-            <li
-              key={proposal}
-              className=" text-base mr-[35px] last:mr-0 text-center hover:text-orange active:text-yellow lg:mr-8 lg:text-[24px] "
-            >
-              <ProposalsItem
-                onClick={handleProposalItemClick}
-                current={current === proposal}
-              >
-                {proposal}
-              </ProposalsItem>
-            </li>
-          ))}
-        </ul>
+        <ProposalsList
+          proposals={proposals}
+          onClick={handleProposalItemClick}
+          current={current}
+        />
         <ProductsListSlider products={productsForRender} />
       </div>
     </section>

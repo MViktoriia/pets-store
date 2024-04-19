@@ -4,10 +4,10 @@ import ProposalsItem from './proposals-item';
 export interface ProposalsListProps {
   proposals: string[];
   onClick: MouseEventHandler<HTMLButtonElement>;
-  isCurrent: boolean;
+  current: string;
 }
 
-function ProposalsList({ proposals, onClick, isCurrent }: ProposalsListProps) {
+function ProposalsList({ proposals, onClick, current }: ProposalsListProps) {
   return (
     <ul className="flex justify-start items-center mb-6">
       {proposals.map((proposal, index) => (
@@ -15,7 +15,7 @@ function ProposalsList({ proposals, onClick, isCurrent }: ProposalsListProps) {
           key={proposal}
           className=" text-base mr-[35px] last:mr-0 text-center hover:text-orange active:text-yellow lg:mr-8 lg:text-[24px] "
         >
-          <ProposalsItem onClick={onClick} current={isCurrent}>
+          <ProposalsItem onClick={onClick} current={current === proposal}>
             {proposal}
           </ProposalsItem>
         </li>
