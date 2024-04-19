@@ -7,10 +7,10 @@ interface AllProducts {
   results: Product[];
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+// const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const buildUrl = (...paths: string[]) =>
-  `http://${BASE_URL}/api/${paths.join('/')}`;
+  `http://ec2-52-59-30-228.eu-central-1.compute.amazonaws.com/api/${paths.join('/')}`;
 
 const stringifyQueryParams = (params: Record<string, string>) =>
   new URLSearchParams(params).toString();
