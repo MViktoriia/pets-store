@@ -1,4 +1,4 @@
-export const products = [
+export const productsLib = [
   {
     id: '1',
     slug: '1',
@@ -7,19 +7,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '4',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '2',
@@ -29,19 +27,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '3',
@@ -51,19 +47,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '4',
@@ -73,19 +67,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '5',
@@ -95,19 +87,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '6',
@@ -117,19 +107,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '7',
@@ -139,19 +127,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '8',
@@ -161,19 +147,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '9',
@@ -183,19 +167,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '10',
@@ -205,19 +187,17 @@ export const products = [
     price: '800',
     priceDiscount: '',
     categories: '',
-    disciuntPercentage: '',
-    typesProduct: '',
+    discountPercentage: '',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '11',
@@ -227,19 +207,17 @@ export const products = [
     price: '800',
     priceDiscount: '680',
     categories: '',
-    disciuntPercentage: '15',
-    typesProduct: '',
+    discountPercentage: '15',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '12',
@@ -249,19 +227,17 @@ export const products = [
     price: '800',
     priceDiscount: '720',
     categories: '',
-    disciuntPercentage: '10',
-    typesProduct: '',
+    discountPercentage: '10',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '13',
@@ -271,19 +247,17 @@ export const products = [
     price: '800',
     priceDiscount: '720',
     categories: '',
-    disciuntPercentage: '10',
-    typesProduct: '',
+    discountPercentage: '10',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '14',
@@ -293,19 +267,17 @@ export const products = [
     price: '800',
     priceDiscount: '720',
     categories: '',
-    disciuntPercentage: '10',
-    typesProduct: '',
+    discountPercentage: '10',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '15',
@@ -315,19 +287,17 @@ export const products = [
     price: '800',
     priceDiscount: '720',
     categories: '',
-    disciuntPercentage: '10',
-    typesProduct: '',
+    discountPercentage: '10',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
   {
     id: '16',
@@ -337,18 +307,16 @@ export const products = [
     price: '800',
     priceDiscount: '720',
     categories: '',
-    disciuntPercentage: '10',
-    typesProduct: '',
+    discountPercentage: '10',
+    typesProduct: [
+      {
+        productCharacteristics: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+        typeCharacteristic: 'string',
+      },
+    ],
     image: '',
     rating: '5',
-    manufacturer: {
-      id: '1',
-      trade_brand: 'Brand',
-      country: 'country',
-      country_brand_registration: 'Country brand registration',
-    },
-    description:
+    descriptionShort:
       'Red Point Donut Хутряний лежак із подушкою для котів і собак, рожевий',
-    images: { id: '1', image: '', product: '' },
   },
 ];

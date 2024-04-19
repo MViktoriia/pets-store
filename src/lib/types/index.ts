@@ -11,19 +11,22 @@ export interface Image {
   product: string /*need to clarify the type */;
 }
 
+export interface TypeProductCharacteristics {
+  productCharacteristics: string;
+  typeCharacteristic: string;
+}
+
 export interface Product {
   id: string;
   slug: string;
   name: string;
   productCode: string;
+  descriptionShort: string;
   price: string;
   priceDiscount: string;
   categories: string;
-  disciuntPercentage: string;
-  typesProduct: string /*need to clarify what is it and it type */;
+  discountPercentage: string;
+  typesProduct: TypeProductCharacteristics[];
   image: string;
   rating: string;
-  manufacturer: Manufacturer;
-  description: string;
-  images: Image;
 }
