@@ -7,22 +7,27 @@ import Mastercard from '../../../../public/images/Mastercard.png'
 import Visa from '../../../../public/images/Visa.png'
 import TelegramIcon from '../icons/TelegramIcon';
 function Footer() {
-  return <footer className="h-97 bg-cyan mt-10 text-white ">
+  return <footer className="md:h-97 h-[510px] bg-cyan mt-10 text-white ">
   <div  >
 <Wave >
 
 </ Wave>
 <div className="container text-center">
   <div className="flex xl:w-[1140px] w-[375px] flex-wrap">
-  <div className="flex-auto bg-gray-200 p-2 md:mr-36 mr-[66px] md:w-44 w-[95px] grid justify-center h-48">
-    <LogoIcon className=" md:w-40 md:h-16 pb-4 w-24 h-10"/>
-    <Image src={CatFooter} alt="ge" />
+  <div className="flex-auto bg-gray-200 md:mr-36  md:w-44 w-[95px] grid justify-center md:h-48">
+    <LogoIcon className=" md:w-40 md:h-16 w-28 h-12 md:pb-4 "/>
+    <Image src={CatFooter} alt="ge" className="w-[95px] h-[101px] md:w-[173px] md:h-[115px]" />
     </div>
   <div className="flex-auto bg-gray-200 m-2 flex-col md:w-48 w-[182px] mr-4 md:h-44">
-  <div className="bg-gray-200  m-2 text-left pb-6"><span className='font-bold text-base '>Контакти
+  <div className="bg-gray-200  m-2 text-left md:pb-6"><span className='font-bold text-base '>Контакти
   </span></div>
-  <div className="flex bg-gray-200 m-2 pb-6">
-    <PhoneIcon className="text-white" /> +38(067) 447-81-03</div>
+  <div className="flex flex-col bg-gray-200 m-2 md:pb-6 pb-4">
+  <div className="flex md:items-center">
+    <PhoneIcon className="text-white mr-2" />
+    <span>+38(067) 447-81-03</span>
+  </div>
+  <span className="md:hidden pt-2 text-left">Зателефонувати вам?</span>
+    </div>
   <div className="bg-gray-200  m-2 ">
     <div className="flex">
       <div className="bg-blue-200  m-1">
@@ -54,8 +59,8 @@ function Footer() {
     </div>
   </div>
   </div>
-  <div className="flex-auto bg-gray-200 m-2 md:w-56 mr-4 text-left">
-  <div className="m-2">
+  <div className="md:flex-auto flex bg-gray-200 md:m-2 md:w-56 w-[198px] md:mr-4 text-left">
+  <div className="md:m-2 w-[198px]">
   <span className='font-bold text-base'>Клієнтам</span>
   <ul className="text-baseM">
     <li className="py-1.5">
@@ -73,11 +78,11 @@ function Footer() {
   </div>
 
 </div>
-  <div className="flex-auto bg-gray-200 m-2 md:w-63 text-left">
-  <span className='font-bold text-base '>Способи оплати:
+  <div className="md:flex-auto flex flex-col bg-gray-200 md:m-2 md:w-63 w-[144px] md:text-left text-center h-[134px]">
+  <span className='md:font-bold font-semibold text-base '>Способи оплати:
   </span>
-  <div className="flex  justify-left md:w-63 mt-4">
-    <Image src={Mastercard} alt="Способи оплати" className="mr-4"  />
+  <div className="flex flex-col md:flex-row md:justify-start justify-center items-center  md:w-63 w-[144px] mt-4  ">
+    <Image src={Mastercard} alt="Способи оплати" className="md:mr-4 mb-4 md:mb-0"  />
     <Image src={Visa} alt="Способи оплати"  />
   </div>
   </div>
