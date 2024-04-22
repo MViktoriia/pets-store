@@ -12,7 +12,7 @@ function Footer() {
 <Wave >
 
 </ Wave>
-<div className="container text-center">
+<div className="container text-center md:h-[199px]">
   <div className="flex xl:w-[1140px] w-[375px] flex-wrap">
   <div className="flex-auto bg-gray-200 md:mr-36  md:w-44 w-[95px] grid justify-center md:h-48">
     <LogoIcon className=" md:w-40 md:h-16 w-28 h-12 md:pb-4 "/>
@@ -63,17 +63,17 @@ function Footer() {
   <div className="md:m-2 w-[198px]">
   <span className='font-bold text-base'>Клієнтам</span>
   <ul className="text-baseM">
-    <li className="py-1.5">
+    <li className="pb-1.5">
     Доставка і оплата
     </li>
-    <li className="py-1.5">
+    <li className="pb-1.5">
     Обмін і повернення
     </li>
-    <li className="py-1.5">
+    <li className="pb-1.5">
     Публічна оферта
     </li>
-    <li className="py-1.5">Політика конфіденційності</li>
-    <li className="py-1.5">Програма лояльності</li>
+    <li className="pb-1.5">Політика конфіденційності</li>
+    <li className="pb-1.5">Програма лояльності</li>
   </ul>
   </div>
 
@@ -89,7 +89,11 @@ function Footer() {
 </div>
 </div>
 </div>
- 
+ <div className="border-t-[1px] mt-[5px] text-center text-sm pt-[2px]">
+ © 2023<br/>
+Інтернет-зоомагазин <br/>
+Всі права захищені <br/>
+ </div>
     </footer>;
 }
 
