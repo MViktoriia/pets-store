@@ -23,7 +23,6 @@ function NavigationDropDown({name, img, elementObj, onNameChange}: Props){
     const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden` ;
     const imageContainder = `${styles.wide} hidden md:block`
     const categoryIcon = `${styles.narrow} hidden md:block`
-    
     const handleCategoryClick = (newName:string, key:string) => {
       onNameChange(newName, key);
     };
@@ -45,7 +44,7 @@ function NavigationDropDown({name, img, elementObj, onNameChange}: Props){
     </div>
     <div className='grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white'>
       {elementObj && elementObj.subcategories.map((element, index)=>(
-        <NavList key={index} name={element.name} elementObj={element}  />
+        <NavList key={index} name={element.name} elementObj={element} key2={index} />
       ))}
   {/* <NavList />
   <NavList />
