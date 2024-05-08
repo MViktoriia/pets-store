@@ -2,10 +2,11 @@ import { instance } from './auth';
 
 
 async function fetchCategories  () {
-  console.log('hi')
   const data = await instance.get(`/shop/`);
-  console.log(data)
-  return data;
+  console.log(data.data.results)
+  if(data){
+    return data.data.results;
+  }
 };
 
 export default fetchCategories;

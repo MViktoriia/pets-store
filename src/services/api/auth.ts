@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const BASE_URL =
-  'http://ec2-3-79-232-227.eu-central-1.compute.amazonaws.com/api';
+  'http://ec2-52-59-30-228.eu-central-1.compute.amazonaws.com/api';
 
 export const instance = axios.create({
   baseURL: BASE_URL,
