@@ -107,6 +107,13 @@ export const categories = [
                                 "slug": "igrashki",
                                 "level": 2,
                                 "subcategories": []
+                            },
+                            {
+                                "id": "540d54e4-236f-4ab6-948d-317c0d821b4d",
+                                "name": "Not Іграшки",
+                                "slug": "igrashki",
+                                "level": 2,
+                                "subcategories": []
                             }
                         ]
                     },

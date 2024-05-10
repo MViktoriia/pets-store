@@ -13,8 +13,8 @@ function Footer() {
 
 </ Wave>
 <div className="container text-center">
-  <div className="flex xl:w-[1140px] w-[375px] flex-wrap">
-  <div className="flex-auto bg-gray-200 md:mr-36  md:w-44 w-[95px] grid justify-center md:h-48">
+  <div className="flex  flex-wrap">
+  <div className="flex-auto bg-gray-200 md:mr-20  md:w-44 w-[95px] grid justify-center md:h-48">
     <LogoIcon className=" md:w-40 md:h-16 w-28 h-12 md:pb-4 "/>
     <Image src={CatFooter} alt="ge" className="w-[95px] h-[101px] md:w-[173px] md:h-[115px]" />
     </div>
@@ -81,7 +81,7 @@ function Footer() {
   <div className="md:flex-auto flex flex-col bg-gray-200 md:m-2 md:w-63 w-[144px] md:text-left text-center h-[134px]">
   <span className='md:font-bold font-semibold text-base '>Способи оплати:
   </span>
-  <div className="flex flex-col md:flex-row md:justify-start justify-center items-center  md:w-63 w-[144px] mt-4  ">
+  <div className="flex flex-col md:flex-row md:justify-start justify-center items-center  lg:w-63 w-[144px] mt-4  ">
     <Image src={Mastercard} alt="Способи оплати" className="md:mr-4 mb-4 md:mb-0"  />
     <Image src={Visa} alt="Способи оплати"  />
   </div>

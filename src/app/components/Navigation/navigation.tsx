@@ -1,5 +1,5 @@
 'use client'
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, useState, useEffect } from 'react';
 import fetchCategories from '@/services/api/categories';
 import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
@@ -7,29 +7,42 @@ import { BirdIcon, CatIcon, DogIcon, FishIcon } from '../icons';
 import styles from './Navigation.module.css'; 
 import NavigationDropDown from './NavigationDropDown';
 import { categories } from '../../../lib/utils/constants/categories';
-
+interface Item {
+  id: string;
+  name: string;
+  description: string;
+  subcategories: []
+}
 
 function Navigation(){
   const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} ${styles.ulScroll} bg-cyan-light md:rounded-xl overflow-x-auto`;
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
+ const [categoriesNav, setCategoriesNav] = useState<Item[]>([]);
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const [nameCategory, setNameCategory] = useState('')
   const [clickedItem, setClickedItem] = useState<string>('');
   const [nameKey, setNewNameKey] = useState<string>('');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await fetchCategories(); // Assuming fetchCategories returns a Promise<Item[]> or undefined
+        setCategoriesNav(result); // Assuming setCategoriesNav is expecting Item[] | undefined
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+}, []);
   function HandleOnclick(event: any, key:string) {
     event.isDefaultPrevented();
     const spanValue = event.currentTarget.innerText;
     if(nameKey !== key){
-      console.log(key)
-     // fetchCategories();
-     //console.log(categories[0].results[0].name)
       setDropDownMenu(true)
       setClickedItem(key)
     }else{
       setDropDownMenu(false)
       setClickedItem('')
     }
-   // dropDownMenu ? setClicked('') : setClicked(key);
     setNameCategory(spanValue);
     setNewNameKey(key);
   }
@@ -37,7 +50,6 @@ function Navigation(){
     setNameCategory(newName);
     setNewNameKey(key)
     setClickedItem(key)
-   
   };
   return(
        <>
@@ -75,11 +87,12 @@ function Navigation(){
         </a>
         </li>
      </ul>
-     {dropDownMenu && categories[0].results
+     {dropDownMenu && categoriesNav
   .filter(element => element.name === nameCategory)
   .map((element, index) => (
     <NavigationDropDown key={index} name={nameCategory} img={nameKey} onNameChange={handleNameChange} elementObj={element} />
   ))}
+
     {/* {dropDownMenu && <NavigationDropDown name={nameCategory} img={nameKey}  onNameChange={handleNameChange} />} */}
 
      
