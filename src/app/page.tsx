@@ -6,6 +6,9 @@ import Proposals from './components/Proposals/proposals';
 import Brands from './components/Brands/brands';
 import Reviews from './components/Reviews/reviews';
 import { getAllProducts } from '@/services/api/api';
+import Modal from './components/Modal/modal';
+import NotificationPopup from './components/Popap/NotificationPopup';
+import Notification from './components/Popap/Notification';
 
 export default async function Home() {
   const productsInfo = await getAllProducts({
@@ -22,6 +25,7 @@ export default async function Home() {
       <Delivery />
       <Brands />
       <Reviews />
+      <Notification />
     </main>
   );
 }
