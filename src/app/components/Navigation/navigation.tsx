@@ -81,7 +81,7 @@ function Navigation(){
       </a>   
        </li>
        <li className={`md:flex-1 text-center px-3  mx-2 shrink-0 h-full md:grid items-center  ${clickedItem === 'fish' ? 'bg-cyan rounded-md' : ''}`}>
-        {/* <FishIcon  className="inline"/> Риби */}
+       
         <a href="#" className='inline-block w-full' onClick={(e) => HandleOnclick(e,'fish')}>  
         <CategoryIcon category={Category.Fish} active={clickedItem === 'fish'} /><span>Риби</span>
         </a>
