@@ -7,6 +7,7 @@ import { BirdIcon, CatIcon, DogIcon, FishIcon } from '../icons';
 import styles from './Navigation.module.css'; 
 import NavigationDropDown from './NavigationDropDown';
 import { categories } from '../../../lib/utils/constants/categories';
+import { getCategories } from '@/services/api/api';
 interface Item {
   id: string;
   name: string;
@@ -14,7 +15,9 @@ interface Item {
   subcategories: []
 }
 
-function Navigation(){
+  function Navigation(){
+    
+    
   const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} ${styles.ulScroll} bg-cyan-light md:rounded-xl overflow-x-auto`;
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
  const [categoriesNav, setCategoriesNav] = useState<Item[]>([]);
@@ -22,17 +25,31 @@ function Navigation(){
   const [nameCategory, setNameCategory] = useState('')
   const [clickedItem, setClickedItem] = useState<string>('');
   const [nameKey, setNewNameKey] = useState<string>('');
+  async function fetchProductData() {
+    const categoriesInfo = await getCategories({
+      next: { revalidate: 60 },
+    });
+    const categoriesArray = categoriesInfo.results;
+    console.log(categoriesArray)
+    setCategoriesNav(categoriesArray)
+    // Здесь можно использовать переменную products для дальнейшей обработки
+  }
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await fetchCategories(); // Assuming fetchCategories returns a Promise<Item[]> or undefined
-        setCategoriesNav(result); // Assuming setCategoriesNav is expecting Item[] | undefined
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-}, []);
+    fetchProductData();
+    
+  },[])
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const result = await fetchCategories(); // Assuming fetchCategories returns a Promise<Item[]> or undefined
+//         setCategoriesNav(result); // Assuming setCategoriesNav is expecting Item[] | undefined
+//       } catch (error) {
+//         console.error('Error fetching data:', error);
+//       }
+//     };
+//     fetchData();
+// }, []);
   function HandleOnclick(event: any, key:string) {
     event.isDefaultPrevented();
     const spanValue = event.currentTarget.innerText;

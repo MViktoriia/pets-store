@@ -6,6 +6,12 @@ interface AllProducts {
   previous: string;
   results: Product[];
 }
+interface Categories {
+  count: number;
+  next: string;
+  previous: string;
+  results: [];
+}
 
 // const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -29,7 +35,7 @@ export const getAllProducts = (init?: RequestInit) => {
   return sendRequest<AllProducts>(buildUrl('shop', 'products'), init);
 };
 
-//List of categories.
+//List of categories .
 export const getCategories = (init?: RequestInit) => {
-  return sendRequest<AllProducts>(buildUrl('shop'), init);
+  return sendRequest<Categories>(buildUrl('shop'), init);
 };
