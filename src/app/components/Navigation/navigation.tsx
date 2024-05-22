@@ -1,4 +1,3 @@
-'use client'
 import { MouseEvent, useState, useEffect } from 'react';
 import fetchCategories from '@/services/api/categories';
 import CategoryIcon from '../category-icon';
@@ -36,8 +35,7 @@ interface Item {
   }
   useEffect(() => {
     fetchProductData();
-    
-  },[])
+      },[])
 
 //   useEffect(() => {
 //     const fetchData = async () => {
