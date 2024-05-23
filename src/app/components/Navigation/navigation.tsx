@@ -1,3 +1,4 @@
+'use client'
 import { MouseEvent, useState, useEffect } from 'react';
 import fetchCategories from '@/services/api/categories';
 import CategoryIcon from '../category-icon';
@@ -7,16 +8,14 @@ import styles from './Navigation.module.css';
 import NavigationDropDown from './NavigationDropDown';
 import { categories } from '../../../lib/utils/constants/categories';
 import { getCategories } from '@/services/api/api';
+import { fetchData } from '@/services/apiN';
 interface Item {
   id: string;
   name: string;
   description: string;
   subcategories: []
 }
-
   function Navigation(){
-    
-    
   const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} ${styles.ulScroll} bg-cyan-light md:rounded-xl overflow-x-auto`;
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
  const [categoriesNav, setCategoriesNav] = useState<Item[]>([]);
@@ -24,19 +23,18 @@ interface Item {
   const [nameCategory, setNameCategory] = useState('')
   const [clickedItem, setClickedItem] = useState<string>('');
   const [nameKey, setNewNameKey] = useState<string>('');
-  async function fetchProductData() {
-    const categoriesInfo = await getCategories({
-      next: { revalidate: 60 },
-    });
-    const categoriesArray = categoriesInfo.results;
-    console.log(categoriesArray)
-    setCategoriesNav(categoriesArray)
-    // Здесь можно использовать переменную products для дальнейшей обработки
-  }
-  useEffect(() => {
-    fetchProductData();
-      },[])
+ 
 
+  const handleClick = async () => {
+    try {
+      const response = await fetchData();
+      console.log(response)
+      setCategoriesNav(response)
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  useEffect(() => {handleClick()},[])
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {

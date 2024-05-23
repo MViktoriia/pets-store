@@ -13,7 +13,6 @@ interface ProposalsProps {
 function Proposals({ products }: ProposalsProps) {
   const proposals = ['Новинки', 'Популярні товари', 'Акції'];
   const productsList = [...products];
-console.log(productsList)
   const [current, setCurrent] = useState('Новинки');
   const [productsForRender, setProductForRender] = useState(
     products.filter((_, index) => index < 10),
