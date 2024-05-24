@@ -5,7 +5,6 @@ import burger from '../../../../public/icons/Burger.png';
 import Image from 'next/image';
 import Navigation from '../Navigation/navigation';
 import BurgerMenu from '../BurgerMenu/burger-menu';
-
 import { useState } from 'react';
 import Backdrop from '../BurgerMenu/backdrop';
 
