@@ -20,7 +20,7 @@ interface Item {
 interface ProposalsProps {
   arrCategories: Item[];
 }
- function NavigationUseClient({arrCategories}:ProposalsProps){
+ function NavigationUseClient(){
   const ulClasses = ` flex fontFamily-sans md:h-20 min-h-12 items-center ${styles.navText} ${styles.ulScroll} bg-cyan-light md:rounded-xl overflow-x-auto`;
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
  const [categoriesNav, setCategoriesNav] = useState<Item[]>([]);
@@ -34,8 +34,8 @@ interface ProposalsProps {
     setClickedItem(key)
     setNewNameKey(key)
     setNameCategory(spanValue)
-    setCategoriesNav(arrCategories)
-    console.log(arrCategories)
+    // setCategoriesNav(arrCategories)
+    // console.log(arrCategories)
   }
 
   // const handleClick = async () => {
