@@ -5,7 +5,7 @@ import NavigationUseClient from './navigationCopy';
 async function Navigation(){
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
   const productsInfo = await getCategories({
-    next: { revalidate: 600 },
+    next: { revalidate: 60 },
   });
   const categories = productsInfo.results;
   return(
