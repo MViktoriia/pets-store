@@ -5,14 +5,19 @@ import Promo from './components/Promo/promo';
 import Proposals from './components/Proposals/proposals';
 import Brands from './components/Brands/brands';
 import Reviews from './components/Reviews/reviews';
-import { getAllProducts } from '@/services/api/api';
+import { getAllProducts, getCategories } from '@/services/api/api';
+import Navigation from './components/Navigation/navigation';
 
 export default async function Home() {
   const productsInfo = await getAllProducts({
     next: { revalidate: 60 },
   });
   const products = productsInfo.results;
-
+  const productsInfo1 = await getCategories({
+    next: { revalidate: 60 },
+  });
+  const categories = productsInfo1.results;
+  console.log(categories)
   return (
     <main>
       <Hero />
@@ -22,6 +27,7 @@ export default async function Home() {
       <Delivery />
       <Brands />
       <Reviews />
+    <Navigation categories={categories} />
     </main>
   );
 }
