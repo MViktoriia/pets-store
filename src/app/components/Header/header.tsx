@@ -1,14 +1,10 @@
 'use client';
 import { CartIcon, CrossIcon, HeartIcon, LogoIcon } from '../icons';
-import logo from '../../../../public/icons/Logo.png';
 import burger from '../../../../public/icons/Burger.png';
 import Image from 'next/image';
-import Navigation from '../Navigation/navigation';
 import BurgerMenu from '../BurgerMenu/burger-menu';
-
 import { useState } from 'react';
 import Backdrop from '../BurgerMenu/backdrop';
-
 function Header() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const handleOpenCloseBurgerMenuBtn = () => {
@@ -56,14 +52,13 @@ function Header() {
           </div>
         </div>
       </header>
-      <Navigation />
-
       <Backdrop isOpen={isBurgerMenuOpen}>
         <BurgerMenu
           onCloseClick={handleOpenCloseBurgerMenuBtn}
           isOpen={isBurgerMenuOpen}
         />
       </Backdrop>
+
     </>
   );
 }
