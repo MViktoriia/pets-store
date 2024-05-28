@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cormorant, Crimson_Pro, Montserrat, Inter } from 'next/font/google';
 import './globals.css';
-import Header from './components/Header/header';
+import HeaderSection from './components/Header/headerSection';
 import SideContactPanel from './components/SideContactsPanel/side-contact-panel';
 import Footer from './components/Footer/footer';
 
@@ -29,18 +29,19 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) 
+{
   return (
     <html
       lang="en"
       className={`${cormorant.variable} ${montserrat.variable} ${crimson.variable} ${inter.variable}`}
     >
       <body>
-        <Header />
+        <HeaderSection />
         <SideContactPanel />
         {children}
         <Footer />
