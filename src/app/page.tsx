@@ -8,15 +8,15 @@ import Reviews from './components/Reviews/reviews';
 import { getAllProducts } from '@/services/api/api';
 
 export default async function Home() {
-  const productsInfo = await getAllProducts({
-    next: { revalidate: 60 },
-  });
-  const products = productsInfo.results;
+  // const productsInfo = await getAllProducts({
+  //   next: { revalidate: 60 },
+  // });
+  // const products = productsInfo.results;
 
   return (
     <main>
       <Hero />
-      <Proposals products={products} />
+      {/* <Proposals products={products} /> */}
       <Promo />
       <OurAdvantages />
       <Delivery />
