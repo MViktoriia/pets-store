@@ -34,7 +34,7 @@ interface ProposalsProps {
     setClickedItem(key)
     setNewNameKey(key)
     setNameCategory(spanValue)
-     setCategoriesNav(arrCategories)
+    //  setCategoriesNav(arrCategories)
     // console.log(arrCategories)
   }
 
@@ -58,7 +58,7 @@ interface ProposalsProps {
        <>
     
     <NavigationCategories onClickTHings={onClickTHings} nameKey={nameKey} />
-     {dropDownMenu && categoriesNav
+     {dropDownMenu && arrCategories
   .filter(element => element.name === nameCategory)
   .map((element, index) => (
     <NavigationDropDown key={index} name={nameCategory} img={nameKey} onNameChange={handleNameChange} elementObj={element} />
