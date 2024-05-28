@@ -1,22 +1,12 @@
 import styles from './Navigation.module.css'; 
 import { getCategories } from '@/services/api/api';
 import NavigationUseClient from './navigationCopy';
-interface Item {
-    id: string,
-    name: string,
-    slug: string,
-    level: number,
-    subcategories: []
-  }
-  interface ProposalsProps {
-    categories: Item[];
-  }
- function Navigation({categories}: ProposalsProps){
+import {fetchData} from '@/services/apiN'
+ async function Navigation(){
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
-//   const productsInfo = await getCategories({
-//     next: { revalidate: 60 },
-// //   });
-//   const categories = productsInfo.results;
+  const productsInfo = await fetchData();
+  const categories = productsInfo;
+  console.log(categories)
   return(
        <>
        <section className="bg-cyan">
