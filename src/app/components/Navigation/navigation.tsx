@@ -4,15 +4,15 @@ import NavigationUseClient from './navigationCopy';
 
 async function Navigation(){
   const navClasses = `md:container mx-auto bg-cyan ${styles.scrollableContainer}`
-  // const productsInfo = await getCategories({
-  //   next: { revalidate: 4000 },
-  // });
-  // const categories = productsInfo.results;
+  const productsInfo = await getCategories({
+    next: { revalidate: 600 },
+  });
+  const categories = productsInfo.results;
   return(
        <>
        <section className="bg-cyan">
        <nav className={navClasses}>
-   <NavigationUseClient  />
+   <NavigationUseClient arrCategories={categories} />
        </nav>
        </section>
         </>
