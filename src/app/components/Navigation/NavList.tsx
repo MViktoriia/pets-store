@@ -40,11 +40,16 @@ function NavList({ categorySlug, name, elementObj, key2 }: Props) {
           <Image className="inline md:hidden" src={Vector} alt="vector"></Image>
         </p>
         <div className={block}>
-          <ul className='text-base font-medium'>
-            {elementObj && elementObj.subcategories && elementObj.subcategories.map((element, index) => (
-              <li key={index} className='py-2 leading-5 mdLiNav'><Link href={`/${categorySlug}/${element.slug}>{element.name}</Link></li>
-            ))}
-         
+          <ul className="text-base font-medium">
+            {elementObj &&
+              elementObj.subcategories &&
+              elementObj.subcategories.map((element, index) => (
+                <li key={index} className="py-2 leading-5 mdLiNav">
+                  <Link href={`/${categorySlug}/${element.slug}`}>
+                    {element.name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </div>
