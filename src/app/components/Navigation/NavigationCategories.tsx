@@ -15,7 +15,6 @@ function NavigationCategories({onClickTHings, nameKey }: Item){
         event.isDefaultPrevented();
         const spanValue = event.currentTarget.innerText;
         if(nameKey !== key){
-            console.log('hej')
             onClickTHings(true, key, spanValue)
         }else{
             onClickTHings(false, key, spanValue)

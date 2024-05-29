@@ -6,7 +6,7 @@
   .narrow {
     width: 80px;
     text-align: center;
-    margin-right: 80px;
+    margin-right: 40px;
      /*flex: 1; The first div will take up less space */
    
   }
@@ -16,6 +16,5 @@
   }
   
   .wide {
-    flex: 2; /* The second and third divs will take up more space */
-
+   /* flex: 2;  The second and third divs will take up more space */
   }
