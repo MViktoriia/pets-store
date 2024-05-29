@@ -36,10 +36,7 @@ function NavList({ name, elementObj, key2 }: Props) {
             {elementObj && elementObj.subcategories && elementObj.subcategories.map((element, index) => (
               <li key={index} className='py-2 leading-5 mdLiNav'><a>{element.name}</a></li>
             ))}
-            {/* <li className='py-2 leading-5'><a>Сухий корм</a></li>
-        <li className='py-2 leading-5'><a>Вологий корм</a></li>
-        <li className='py-2 leading-5'><a>Лікувальний корм</a></li>
-        <li className='py-2 leading-5'><a>Ласощі</a></li> */}
+         
           </ul>
         </div>
       </div>

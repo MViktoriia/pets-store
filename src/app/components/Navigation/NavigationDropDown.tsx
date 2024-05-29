@@ -4,6 +4,7 @@ import { Category } from '../../components/category-icon'
 import Image from 'next/image';
 import imgUrl from  '../../../../public/images/dog-menu-popup-2x.png';
 import NavList from './NavList';
+import { PawsIcon } from '../icons';
 
 interface Subcategory {
   id: string;
@@ -40,18 +41,12 @@ function NavigationDropDown({name, img, elementObj, onNameChange}: Props){
     <div className='flex justify-between  md:h-16 items-center md:w-96 border-b-2 border-yellow'>
 <div className=''>
     <h2 className='font-serif text-white text-xl font-bold'>{name}</h2></div>
-<div>2</div>
+<div><PawsIcon /></div>
     </div>
     <div className='grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white'>
       {elementObj && elementObj.subcategories.map((element, index)=>(
         <NavList key={index} name={element.name} elementObj={element} key2={index} />
       ))}
-  {/* <NavList />
-  <NavList />
-  <NavList />
-  <NavList />
-  <NavList />
-  <NavList /> */}
   </div>
   </div>
  

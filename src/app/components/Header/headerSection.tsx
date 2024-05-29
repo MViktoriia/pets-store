@@ -5,9 +5,8 @@ import { fetchData } from '@/services/apiN';
 
 
 async function HeaderSection() {
-  const productsInfo = await fetchData();
-  const categories = productsInfo;
-  console.log(categories)
+  const categoriesInfo = await fetchData();
+  const categories = categoriesInfo;
   return (
     <>
       <Header />
