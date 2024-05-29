@@ -4,6 +4,7 @@ import { Category } from '../../components/category-icon';
 import Image from 'next/image';
 import imgUrl from '../../../../public/images/dog-menu-popup-2x.png';
 import NavList from './NavList';
+import { PawsIcon } from '../icons';
 
 interface Subcategory {
   id: string;
@@ -39,12 +40,14 @@ function NavigationDropDown({
       <div className={flexContainer}>
         <div className={categoryIcon}>
           <div onClick={() => handleCategoryClick('Собаки', 'dog')}>
-            <CategoryIcon category={Category.Dog} />
+            <CategoryIcon category={Category.Dog} />{' '}
           </div>
           <div onClick={() => handleCategoryClick('Коти', 'cat')}>
+            {' '}
             <CategoryIcon category={Category.Cat} />
           </div>
           <div onClick={() => handleCategoryClick('Птахи', 'bird')}>
+            {' '}
             <CategoryIcon category={Category.Bird} />
           </div>
           <div onClick={() => handleCategoryClick('Риби', 'fish')}>
@@ -58,7 +61,9 @@ function NavigationDropDown({
                 {name}
               </h2>
             </div>
-            <div>2</div>
+            <div>
+              <PawsIcon />
+            </div>
           </div>
           <div className="grid md:grid-cols-3 md:gap-5 md:mt-2 font-sans text-white">
             {elementObj &&
@@ -71,12 +76,6 @@ function NavigationDropDown({
                   key2={index}
                 />
               ))}
-            {/* <NavList />
-  <NavList />
-  <NavList />
-  <NavList />
-  <NavList />
-  <NavList /> */}
           </div>
         </div>
 
