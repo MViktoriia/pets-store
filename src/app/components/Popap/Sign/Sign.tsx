@@ -5,7 +5,7 @@ import SignUp from './SignUp';
 import Image from 'next/image';
 import logo from '../../../../../public/icons/Logo.png';
 function Sign() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   return (
     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
