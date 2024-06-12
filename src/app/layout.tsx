@@ -4,6 +4,8 @@ import './globals.css';
 import HeaderSection from './components/Header/headerSection';
 import SideContactPanel from './components/SideContactsPanel/side-contact-panel';
 import Footer from './components/Footer/footer';
+import Sign from './components/Popap/Sign/Sign';
+import Modal from './components/Modal/modal';
 
 const cormorant = Cormorant({
   subsets: ['latin', 'cyrillic'],
@@ -45,6 +47,7 @@ export default async function RootLayout({
         <SideContactPanel />
         {children}
         <Footer />
+    <Sign />
       </body>
     </html>
   );
