@@ -25,6 +25,7 @@ module.exports = {
         extraLight: '#E6E6E7',
         DEFAULT: '#3C3C3C',
         ligthMax: '#E8E8E8',
+        dark: "#B4B4B4"
       },
       transparent: 'transparent',
     },
@@ -46,6 +47,9 @@ module.exports = {
       xxl: '40px',
       full: '9999px',
       large: '12px',
+    },
+    borderWidth: {
+      DEFAULT: '1px',
     },
     fontFamily: {
       serif: ['var(--font-cormorant)'],

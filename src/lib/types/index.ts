@@ -30,3 +30,11 @@ export interface Product {
   image: string;
   rating: string;
 }
+export interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {
+  placeholder?: string;
+  type: string;
+  className?: string;
+}
+export interface CustomCheckboxProps {
+  text: string;
+}
