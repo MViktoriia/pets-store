@@ -7,12 +7,12 @@ import Mastercard from '../../../../public/images/Mastercard.png'
 import Visa from '../../../../public/images/Visa.png'
 import TelegramIcon from '../icons/TelegramIcon';
 function Footer() {
-  return <footer className="md:h-97 h-[510px] bg-cyan mt-10 text-white ">
-  <div  >
-<Wave >
+  return <footer className="md:h-97 h-[510px]  mt-10 text-white ">
+  <div>
+<Wave viewBox="1 1 1560 214">
 
 </ Wave>
-<div className="container text-center">
+<div className="container bg-cyan text-center">
   <div className="flex  flex-wrap">
   <div className="flex-auto bg-gray-200 md:mr-20  md:w-44 w-[95px] grid justify-center md:h-48">
     <LogoIcon className=" md:w-40 md:h-16 w-28 h-12 md:pb-4 "/>
