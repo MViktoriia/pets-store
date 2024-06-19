@@ -10,6 +10,9 @@ function Header() {
   const handleOpenCloseBurgerMenuBtn = () => {
     setIsBurgerMenuOpen((prevState) => !prevState);
   };
+  const borderStyle = {
+    borderBottom: '1px solid #FFC54B',
+  }
   return (
     <>
       <header className=" relative md:min-h-56 h-48  bg-cyan">
@@ -29,7 +32,7 @@ function Header() {
           </div>
 
           <div className="flex-auto md:flex-col md:text-right h-40">
-            <div className="grid border-b-2 border-yellow md:h-20 items-center">
+            <div className="grid border-b-4 border-yellow md:h-20 items-center" style={borderStyle}>
               <span className="text-lg font-normal text-white hidden md:grid">
                 Увійти
               </span>
