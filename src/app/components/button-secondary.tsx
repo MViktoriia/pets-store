@@ -12,6 +12,7 @@ export const ButtonSecondary: FC<
   > &
     ButtonSecondaryProps
 > = ({ type, onClick, children, className, disabled }) => {
+  
   return (
     <button
       className={clsx(

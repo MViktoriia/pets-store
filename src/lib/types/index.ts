@@ -38,3 +38,6 @@ export interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputEle
 export interface CustomCheckboxProps {
   text: string;
 }
+export interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+  children: React.ReactNode;
+}
