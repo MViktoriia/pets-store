@@ -3,7 +3,7 @@ import { SVGProps } from 'react';
 function Wave(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 1560 214"
+      viewBox="1 0 1560 214"
       xmlns="http://www.w3.org/2000/svg"
       width="100%" 
       enableBackground="new 0 0 1560 214" 
