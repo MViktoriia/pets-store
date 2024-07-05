@@ -1,5 +1,5 @@
 'use client'
-import { MouseEvent, useState, useEffect } from 'react';
+import { MouseEvent, useState, useEffect, useRef } from 'react';
 import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon'
 import { BirdIcon, CatIcon, DogIcon, FishIcon } from '../icons';
@@ -20,6 +20,7 @@ function NavigationCategories({onClickTHings, nameKey }: Item){
             onClickTHings(false, key, spanValue)
         }
       }
+     
    
    return(
 <ul  className={ulClasses}>

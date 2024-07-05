@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import styles from './NavigationDropDown.module.css';
 import CategoryIcon from '../category-icon';
 import { Category } from '../../components/category-icon';
@@ -21,6 +22,7 @@ type Props = {
   img: string;
   elementObj: ElementObject;
   onNameChange: (name: string, key: string) => void;
+  onClick: (booleanN: boolean) => void;
 };
 function NavigationDropDown({
   slug,
@@ -28,16 +30,33 @@ function NavigationDropDown({
   img,
   elementObj,
   onNameChange,
+  onClick
 }: Props) {
+  const navRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        onClick(false)
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [navRef]);
   const flexContainer = `${styles.flexContainer} bg-cyan-light md:rounded-xl md:border-4 border-white border-y-2 border-solid mt-2 p-4 overflow-hidden`;
   const imageContainder = `${styles.wide} hidden md:block`;
   const categoryIcon = `${styles.narrow} hidden md:block`;
   const handleCategoryClick = (newName: string, key: string) => {
     onNameChange(newName, key);
   };
+
+
   return (
     <>
-      <div className={flexContainer}>
+      <div ref={navRef} className={flexContainer}>
         <div className={categoryIcon}>
           <div onClick={() => handleCategoryClick('Собаки', 'dog')}>
             <CategoryIcon category={Category.Dog} />{' '}

@@ -1,7 +1,7 @@
+
 import styles from './Navigation.module.css'; 
-import { getCategories } from '@/services/api/api';
+
 import NavigationUseClient from './navigationCopy';
-import {fetchData} from '@/services/apiN'
 interface Item {
     id: string,
     name: string,

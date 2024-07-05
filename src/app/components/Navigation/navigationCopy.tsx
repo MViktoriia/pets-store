@@ -54,6 +54,9 @@ function NavigationUseClient({ arrCategories }: ProposalsProps) {
     setNewNameKey(key);
     setClickedItem(key);
   };
+  function handleHiddenDropmenu(booleanN: boolean){
+    setDropDownMenu(booleanN);
+  }
   return (
     <>
       <NavigationCategories onClickTHings={onClickTHings} nameKey={nameKey} />
@@ -68,6 +71,7 @@ function NavigationUseClient({ arrCategories }: ProposalsProps) {
               img={nameKey}
               onNameChange={handleNameChange}
               elementObj={element}
+              onClick={handleHiddenDropmenu}
             />
           ))}
     </>
