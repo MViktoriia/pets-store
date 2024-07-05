@@ -1,5 +1,6 @@
 'use client';
 import { CartIcon, CrossIcon, HeartIcon, LogoIcon } from '../icons';
+import Link from 'next/link';
 import burger from '../../../../public/icons/Burger.png';
 import Image from 'next/image';
 import BurgerMenu from '../BurgerMenu/burger-menu';
@@ -26,7 +27,7 @@ function Header() {
               />
             </button>
             <div className="flex-1 bg-lightblue grid items-center justify-center mb-4 md:mb-0">
-              <LogoIcon className="md:w-56 md:h-24 w-28 h-12" />
+          <Link href="/"> <LogoIcon className="md:w-56 md:h-24 w-28 h-12" /></Link>    
               {/* <Image  src={logo} className="md:w-56 w-29" alt="Logo" /> */}
             </div>
           </div>

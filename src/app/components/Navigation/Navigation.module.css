@@ -17,6 +17,9 @@ color: white
   position: relative;
  
 }
+
+
+
 .scrollableContainer::-webkit-scrollbar {
   width: 0px;  /* ширина scrollbar'a */
   background: transparent; 
